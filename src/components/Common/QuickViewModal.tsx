@@ -22,6 +22,8 @@ const QuickViewModal = () => {
 
   const [activePreview, setActivePreview] = useState(0);
 
+  const imageSrc = product?.imgs?.previews?.[activePreview];
+
   // preview modal
   const handlePreviewSlider = () => {
     dispatch(updateproductDetails(product));
@@ -137,12 +139,14 @@ const QuickViewModal = () => {
                       </svg>
                     </button>
 
+                    {imageSrc && (
                     <Image
                       src={product?.imgs?.previews?.[activePreview]}
                       alt="products-details"
                       width={400}
                       height={400}
                     />
+                    )}
                   </div>
                 </div>
               </div>
