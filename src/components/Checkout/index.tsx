@@ -39,7 +39,7 @@ const Checkout = () => {
                       id="notes"
                       rows={5}
                       placeholder="Notes about your order, e.g. speacial notes for delivery."
-                      className="rounded-md border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full p-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
+                      className="rounded-md border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full p-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-red/20"
                     ></textarea>
                   </div>
                 </div>
@@ -134,7 +134,7 @@ const Checkout = () => {
                 {/* <!-- checkout button --> */}
                 <button
                   type="submit"
-                  className="w-full flex justify-center font-medium text-white bg-blue py-3 px-6 rounded-md ease-out duration-200 hover:bg-blue-dark mt-7.5"
+                  className="w-full flex justify-center font-medium text-white bg-red py-3 px-6 rounded-md ease-out duration-200 hover:bg-red-dark mt-7.5"
                 >
                   Process to Checkout
                 </button>
