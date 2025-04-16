@@ -50,7 +50,7 @@ const Dropdown = ({ menuItem, stickyMenu }) => {
                 } `}
             >
               {item.title}
-              {item.submenu && (
+              {/* {item.submenu && (
                 <svg
                   className="fill-current cursor-pointer mt-0.5 ml-2"
                   width="16"
@@ -66,9 +66,9 @@ const Dropdown = ({ menuItem, stickyMenu }) => {
                     fill=""
                   />
                 </svg>
-              )}
+              )} */}
             </Link>
-            {item.submenu && (
+            {/* {item.submenu && (
               <ul className="absolute left-full top-0 mt-0 ml-2 bg-white shadow-lg border border-gray-3 rounded-md hidden group-hover/subsubmenu:block">
                 {item.submenu.map((subItem, j) => (
                   <li key={j}>
@@ -82,7 +82,7 @@ const Dropdown = ({ menuItem, stickyMenu }) => {
                   </li>
                 ))}
               </ul>
-            )}
+            )} */}
           </li>
         ))}
       </ul>
