@@ -132,7 +132,7 @@ input[type='search']::-webkit-search-results-decoration {
 
 
 .hero-carousel .swiper-pagination-bullet {
-  @apply h-1 w-4 rounded-[11px] bg-[#DDD];
+  @apply h-1 w-4 rounded-[11px];
 }
 
 .hero-carousel .swiper-pagination-bullet-active {
