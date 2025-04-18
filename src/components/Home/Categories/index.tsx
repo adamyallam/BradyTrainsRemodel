@@ -77,7 +77,7 @@ const Categories = () => {
               </h2>
             </div>
 
-            <div className="flex items-center gap-3">
+            {/* <div className="flex items-center gap-3">
               <button onClick={handlePrev} className="swiper-button-prev">
                 <svg
                   className="fill-current"
@@ -113,10 +113,10 @@ const Categories = () => {
                   />
                 </svg>
               </button>
-            </div>
+            </div> */}
           </div>
 
-          <Swiper
+          {/* <Swiper
             ref={sliderRef}
             slidesPerView={6}
             breakpoints={{
@@ -133,13 +133,23 @@ const Categories = () => {
                 slidesPerView: 6,
               },
             }}
-          >
-            {data.map((item, key) => (
-              <SwiperSlide key={key}>
-                <SingleItem item={item} />
-              </SwiperSlide>
-            ))}
-          </Swiper>
+          > */}
+            {/* <div className="flex items-center justify-center gap-4"> */}
+            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:flex"> 
+              {data.map((item, key) => (
+                <div
+                  className={`w-full ${
+                    (key >= data.length - (data.length % (window.innerWidth >= 1024 ? 3 : 2)) &&
+                      data.length % (window.innerWidth >= 1024 ? 3 : 2) !== 0) ?
+                      (window.innerWidth >= 1024 ? 'col-span-3 flex justify-center' : 'col-span-2 flex justify-center') : ''
+                  }`}
+                  key={key}
+                >
+                  <SingleItem item={item} />
+                </div>
+              ))}
+            </div>
+          {/* </Swiper> */}
         </div>
       </div>
     </section>
