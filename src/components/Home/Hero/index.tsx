@@ -29,19 +29,20 @@ const Hero = () => {
                 <div className="flex items-center gap-14">
                   <div>
                     <h2 className="max-w-[153px] font-semibold text-dark text-xl mb-10">
-                      <a href="#"> iPhone 14 Plus & 14 Pro Max </a>
+                      <a href="#"> New Jersey Blue Comet </a>
                     </h2>
 
                     <div>
                       <p className="font-medium text-dark-4 text-custom-sm">
                         limited time offer
                       </p>
-                      <span className="flex items-center gap-3">
+                      <span className="flex items-center gap-2">
                         <span className="font-medium text-heading-5 text-red">
-                          $699
+                          $2,200
                         </span>
-                        <span className="font-medium text-2xl text-dark-4 line-through">
-                          $999
+                        <span className="flex flex-col font-semibold text-md text-dark">
+                          <span className="translate-y-0.5">$100</span>
+                          <span className="-translate-y-0.5">OFF!</span>
                         </span>
                       </span>
                     </div>
@@ -49,10 +50,10 @@ const Hero = () => {
 
                   <div>
                     <Image
-                      src="/images/hero/hero-02.png"
-                      alt="mobile image"
-                      width={123}
-                      height={161}
+                      src="/images/hero/train-hero-1.png"
+                      alt="Blue Comet"
+                      width={163}
+                      height={191}
                     />
                   </div>
                 </div>
@@ -61,7 +62,7 @@ const Hero = () => {
                 <div className="flex items-center gap-14">
                   <div>
                     <h2 className="max-w-[153px] font-semibold text-dark text-xl mb-10">
-                      <a href="#"> Wireless Headphone </a>
+                      <a href="#"> Turner Dairy Milk Car </a>
                     </h2>
 
                     <div>
@@ -70,10 +71,10 @@ const Hero = () => {
                       </p>
                       <span className="flex items-center gap-3">
                         <span className="font-medium text-heading-5 text-red">
-                          $699
+                          $115
                         </span>
                         <span className="font-medium text-2xl text-dark-4 line-through">
-                          $999
+                          $120
                         </span>
                       </span>
                     </div>
@@ -81,10 +82,10 @@ const Hero = () => {
 
                   <div>
                     <Image
-                      src="/images/hero/hero-01.png"
-                      alt="mobile image"
-                      width={123}
-                      height={161}
+                      src="/images/hero/train-hero-2.png"
+                      alt="Dairy Milk Car"
+                      width={210}
+                      height={210}
                     />
                   </div>
                 </div>
