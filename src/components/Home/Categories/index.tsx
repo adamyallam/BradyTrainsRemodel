@@ -137,14 +137,7 @@ const Categories = () => {
             {/* <div className="flex items-center justify-center gap-4"> */}
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:flex"> 
               {data.map((item, key) => (
-                <div
-                  className={`w-full ${
-                    (key >= data.length - (data.length % (window.innerWidth >= 1024 ? 3 : 2)) &&
-                      data.length % (window.innerWidth >= 1024 ? 3 : 2) !== 0) ?
-                      (window.innerWidth >= 1024 ? 'col-span-3 flex justify-center' : 'col-span-2 flex justify-center') : ''
-                  }`}
-                  key={key}
-                >
+                <div key={key} className='w-full'>
                   <SingleItem item={item} />
                 </div>
               ))}
