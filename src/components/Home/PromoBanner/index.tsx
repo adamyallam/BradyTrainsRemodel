@@ -92,7 +92,7 @@ const PromoBanner = () => {
                 Sale <span className="text-orange">10$</span> OFF
               </h2>
 
-              <p className="max-w-[285px] text-custom-sm mb-20 sm:mb-17">
+              <p className="max-w-[285px] text-custom-sm mb-20 sm:mb-24">
                 With 20' Trailers!
               </p>
 
