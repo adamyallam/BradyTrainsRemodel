@@ -5,7 +5,7 @@ const PromoBanner = () => {
   return (
     <section className="overflow-hidden py-20">
       <div className="max-w-[1170px] w-full mx-auto px-4 sm:px-8 xl:px-0">
-        {/* <!-- promo banner big --> */}
+        {/* <!-- promo banner big -->
         <div className="relative z-1 overflow-hidden rounded-lg bg-[#F5F5F7] py-12.5 lg:py-17.5 xl:py-22.5 px-4 sm:px-7.5 lg:px-14 xl:px-19 mb-7.5">
           <div className="max-w-[550px] w-full">
             <span className="block font-medium text-xl text-dark mb-3">
@@ -36,7 +36,7 @@ const PromoBanner = () => {
             width={274}
             height={350}
           />
-        </div>
+        </div> */}
 
         <div className="grid gap-7.5 grid-cols-1 lg:grid-cols-2">
           {/* <!-- promo banner small --> */}
@@ -45,29 +45,31 @@ const PromoBanner = () => {
               src="/images/promo/promo-02.png"
               alt="promo img"
               className="absolute top-1/2 -translate-y-1/2 left-3 sm:left-10 -z-1"
-              width={241}
-              height={241}
+              width={291}
+              height={291}
             />
 
             <div className="text-right">
               <span className="block text-lg text-dark mb-1.5">
-                Foldable Motorised Treadmill
+                CUSTOM CONRAIL VISION HUDSON
               </span>
 
-              <h2 className="font-bold text-xl lg:text-heading-4 text-dark mb-2.5">
-                Workout At Home
+              <h2 className="font-bold text-xl lg:text-heading-4 text-dark mb-25">
+                NEW LIMITED PREORDER
               </h2>
 
-              <p className="font-semibold text-custom-1 text-teal">
+              {/* <p className="font-semibold text-custom-1 text-teal">
                 Flat 20% off
-              </p>
+              </p> */}
 
-              <a
-                href="#"
-                className="inline-flex font-medium text-custom-sm text-white bg-teal py-2.5 px-8.5 rounded-md ease-out duration-200 hover:bg-teal-dark mt-9"
-              >
-                Grab Now
-              </a>
+              <div className="text-left sm:text-right">
+                <a
+                  href="#"
+                  className="inline-flex font-medium text-custom-sm text-white bg-teal py-2.5 px-8.5 rounded-md ease-out duration-200 hover:bg-teal-dark mt-7"
+                >
+                  Buy Now
+                </a>
+              </div>
             </div>
           </div>
 
@@ -76,28 +78,27 @@ const PromoBanner = () => {
             <Image
               src="/images/promo/promo-03.png"
               alt="promo img"
-              className="absolute top-1/2 -translate-y-1/2 right-3 sm:right-8.5 -z-1"
-              width={200}
-              height={200}
+              className="absolute top-45 sm:top-50 -translate-y-1/2 right-3 sm:right-8.5 -z-1"
+              width={275}
+              height={275}
             />
 
             <div>
               <span className="block text-lg text-dark mb-1.5">
-                Apple Watch Ultra
+                Union Pacific UP TOFC Flatcar
               </span>
 
-              <h2 className="font-bold text-xl lg:text-heading-4 text-dark mb-2.5">
-                Up to <span className="text-orange">40%</span> off
+              <h2 className="font-bold text-xl lg:text-heading-4 text-dark mb-2">
+                Sale <span className="text-orange">10$</span> OFF
               </h2>
 
-              <p className="max-w-[285px] text-custom-sm">
-                The aerospace-grade titanium case strikes the perfect balance of
-                everything.
+              <p className="max-w-[285px] text-custom-sm mb-20 sm:mb-17">
+                With 20' Trailers!
               </p>
 
               <a
                 href="#"
-                className="inline-flex font-medium text-custom-sm text-white bg-orange py-2.5 px-8.5 rounded-md ease-out duration-200 hover:bg-orange-dark mt-7.5"
+                className="inline-flex font-medium text-custom-sm text-white bg-orange py-2.5 px-8.5 rounded-md ease-out duration-200 hover:bg-orange-dark mt-7 sm:mt-0"
               >
                 Buy Now
               </a>
