@@ -15,9 +15,9 @@ const Home = () => {
       <Categories />
       <NewArrival />
       <PromoBanner />
-      <BestSeller />
-      <CounDown />
-      <Testimonials />
+      {/* <BestSeller /> */}
+      {/* <CounDown /> */}
+      {/* <Testimonials /> */}
       <Newsletter />
     </main>
   );
