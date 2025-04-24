@@ -62,7 +62,7 @@ const Header = () => {
       <div className="max-w-[1170px] mx-auto px-2 sm:px-4 xl:px-0">
         {/* <!-- header top start --> */}
         <div
-          className={`flex flex-col lg:flex-row gap-5 items-end lg:items-center xl:justify-between ease-out duration-200 ${stickyMenu ? "py-4" : "py-6" 
+          className={`flex flex-col lg:flex-row gap-5 items-end lg:items-center xl:justify-between ease-out duration-200 ${stickyMenu ? "py-4" : "py-6"
             }`}
         >
           {/* <!-- header top left --> */}
@@ -154,7 +154,7 @@ const Header = () => {
                   CONTACT US
                 </span>
                 <p className="font-medium text-xs text-dark">
-                  (+000) 0000-0000
+                  (+724) 838-8448
                 </p>
               </div>
             </div>
