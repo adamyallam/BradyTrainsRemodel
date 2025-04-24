@@ -37,7 +37,7 @@ const HeroCarousal = () => {
               </span>
             </div>
 
-            <h1 className="font-semibold text-red-dark text-xl sm:text-3xl mb-3">
+            <h1 className="font-semibold text-dark text-xl sm:text-3xl mb-3">
               <a href="#">Custom Run Lionel Cabin Car Caboose</a>
             </h1>
 
@@ -77,7 +77,7 @@ const HeroCarousal = () => {
               </span>
             </div>
 
-            <h1 className="font-semibold text-red-dark text-xl sm:text-3xl mb-3">
+            <h1 className="font-semibold text-dark text-xl sm:text-3xl mb-3">
               <a href="#">Lionel Custom Run Auxiliary Water Tender</a>
             </h1>
 
@@ -117,7 +117,7 @@ const HeroCarousal = () => {
               </span>
             </div>
 
-            <h1 className="font-semibold text-red-dark text-xl sm:text-3xl mb-3">
+            <h1 className="font-semibold text-dark text-xl sm:text-3xl mb-3">
               <a href="#">Lionel CSX Chessie Heritage</a>
             </h1>
 
@@ -157,7 +157,7 @@ const HeroCarousal = () => {
               </span>
             </div>
 
-            <h1 className="font-semibold text-red-dark text-xl sm:text-3xl mb-3">
+            <h1 className="font-semibold text-dark text-xl sm:text-3xl mb-3">
               <a href="#">Lionel Custom Run Woodside Reefer</a>
             </h1>
 
