@@ -16,27 +16,27 @@ const Footer = () => {
 
             <ul className="flex flex-col gap-3">
               <li>
-                <a className="ease-out duration-200 hover:text-red-dark" href="#">
+                <a className="ease-out duration-200 hover:text-red-dark" href="/shop">
                   Shop All Products
                 </a>
               </li>
               <li>
-                <a className="ease-out duration-200 hover:text-red-dark" href="#">
+                <a className="ease-out duration-200 hover:text-red-dark" href="/about">
                   About
                 </a>
               </li>
               <li>
-                <a className="ease-out duration-200 hover:text-red-dark" href="#">
+                <a className="ease-out duration-200 hover:text-red-dark" href="/faq">
                   FAQ’s
                 </a>
               </li>
               <li>
-                <a className="ease-out duration-200 hover:text-red-dark" href="#">
+                <a className="ease-out duration-200 hover:text-red-dark" href="/policies">
                   Policies
                 </a>
               </li>
               <li>
-                <a className="ease-out duration-200 hover:text-red-dark" href="#">
+                <a className="ease-out duration-200 hover:text-red-dark" href="/privacy-policy">
                   Privacy Policy
                 </a>
               </li>
@@ -50,22 +50,22 @@ const Footer = () => {
 
             <ul className="flex flex-col gap-3.5">
               <li>
-                <a className="ease-out duration-200 hover:text-red-dark" href="#">
+                <a className="ease-out duration-200 hover:text-red-dark" href="/signin">
                   Login / Register
                 </a>
               </li>
               <li>
-                <a className="ease-out duration-200 hover:text-red-dark" href="#">
+                <a className="ease-out duration-200 hover:text-red-dark" href="/cart">
                   Cart
                 </a>
               </li>
               <li>
-                <a className="ease-out duration-200 hover:text-red-dark" href="#">
+                <a className="ease-out duration-200 hover:text-red-dark" href="/wishlist">
                   Wishlist
                 </a>
               </li>
               <li>
-                <a className="ease-out duration-200 hover:text-red-dark" href="#">
+                <a className="ease-out duration-200 hover:text-red-dark" href="/shop">
                   Shop
                 </a>
               </li>
