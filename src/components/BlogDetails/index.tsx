@@ -86,12 +86,12 @@ const BlogDetails = () => {
                 className="flex items-center justify-center gap-3 mt-5.5"
               >
                 <div className="flex w-12 h-12 rounded-full overflow-hidden">
-                  <Image
+                  {/* <Image
                     src="/images/users/user-04.jpg"
                     alt="user"
                     width={48}
                     height={48}
-                  />
+                  /> */}
                 </div>
 
                 <div>

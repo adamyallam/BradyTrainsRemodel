@@ -938,13 +938,13 @@ const ShopDetails = () => {
                         <div className="flex items-center justify-between">
                           <a href="#" className="flex items-center gap-4">
                             <div className="w-12.5 h-12.5 rounded-full overflow-hidden">
-                              <Image
+                              {/* <Image
                                 src="/images/users/user-01.jpg"
                                 alt="author"
                                 className="w-12.5 h-12.5 rounded-full overflow-hidden"
                                 width={50}
                                 height={50}
-                              />
+                              /> */}
                             </div>
 
                             <div>
@@ -1052,13 +1052,13 @@ const ShopDetails = () => {
                         <div className="flex items-center justify-between">
                           <a href="#" className="flex items-center gap-4">
                             <div className="w-12.5 h-12.5 rounded-full overflow-hidden">
-                              <Image
+                              {/* <Image
                                 src="/images/users/user-01.jpg"
                                 alt="author"
                                 className="w-12.5 h-12.5 rounded-full overflow-hidden"
                                 width={50}
                                 height={50}
-                              />
+                              /> */}
                             </div>
 
                             <div>
@@ -1166,13 +1166,13 @@ const ShopDetails = () => {
                         <div className="flex items-center justify-between">
                           <a href="#" className="flex items-center gap-4">
                             <div className="w-12.5 h-12.5 rounded-full overflow-hidden">
-                              <Image
+                              {/* <Image
                                 src="/images/users/user-01.jpg"
                                 alt="author"
                                 className="w-12.5 h-12.5 rounded-full overflow-hidden"
                                 width={50}
                                 height={50}
-                              />
+                              /> */}
                             </div>
 
                             <div>
