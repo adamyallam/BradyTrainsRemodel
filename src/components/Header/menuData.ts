@@ -36,82 +36,6 @@ export const menuData: Menu[] = [
         title: "By Scale",
         newTab: false,
         path: "/shop",
-        submenu: [
-          {
-            id: 895,
-            title: "G",
-            newTab: false,
-            path: "/shop",
-          },
-          {
-            id: 995,
-            title: "O",
-            newTab: false,
-            path: "/shop",
-          },
-          {
-            id: 894,
-            title: "S",
-            newTab: false,
-            path: "/shop",
-          },
-          {
-            id: 994,
-            title: "HO",
-            newTab: false,
-            path: "/shop",
-          },
-          {
-            id: 993,
-            title: "N",
-            newTab: false,
-            path: "/shop",
-          },
-          {
-            id: 992,
-            title: "Z",
-            newTab: false,
-            path: "/shop",
-          },
-        ]
-      },
-      {
-        id: 64,
-        title: "Road Name",
-        newTab: false,
-        path: "/shop",
-        submenu: [
-          {
-            id: 991,
-            title: "Eastern Railroads",
-            newTab: false,
-            path: "/shop",
-          },
-          {
-            id: 990,
-            title: "Southern Railroads",
-            newTab: false,
-            path: "/shop",
-          },
-          {
-            id: 989,
-            title: "Midwestern Railroads",
-            newTab: false,
-            path: "/shop",
-          },
-          {
-            id: 988,
-            title: "Western Railroads",
-            newTab: false,
-            path: "/shop",
-          },
-        ]
-      },
-      {
-        id: 65,
-        title: "Themed Collection",
-        newTab: false,
-        path: "/shop",
       },
       {
         id: 66,
@@ -128,12 +52,6 @@ export const menuData: Menu[] = [
       {
         id: 68,
         title: "Transformers & Controllers",
-        newTab: false,
-        path: "/shop",
-      },
-      {
-        id: 69,
-        title: "Pins & Collectibles",
         newTab: false,
         path: "/shop",
       },
