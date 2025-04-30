@@ -37,12 +37,10 @@ const shopData: Product[] = [
     id: 1,
     imgs: {
       thumbnails: [
-        "/images/products/product-1-bg-1.png",
-        "/images/products/product-1-bg-1.png",
+        "/images/products/product-1-main.png",
       ],
       previews: [
-        "/images/products/product-1-bg-1.png",
-        "/images/products/product-1-bg-1.png",
+        "/images/products/product-1-main.png",
       ],
     },
   },
@@ -59,12 +57,10 @@ const shopData: Product[] = [
     id: 2,
     imgs: {
       thumbnails: [
-        "/images/products/product-2-bg-1.png",
-        "/images/products/product-2-bg-1.png",
+        "/images/products/product-2-main.png",
       ],
       previews: [
-        "/images/products/product-2-bg-1.png",
-        "/images/products/product-2-bg-1.png",
+        "/images/products/product-2-main.png",
       ],
     },
   },
@@ -81,12 +77,10 @@ const shopData: Product[] = [
     id: 3,
     imgs: {
       thumbnails: [
-        "/images/products/product-3-bg-1.png",
-        "/images/products/product-3-bg-1.png",
+        "/images/products/product-3-main.png",
       ],
       previews: [
-        "/images/products/product-3-bg-1.png",
-        "/images/products/product-3-bg-1.png",
+        "/images/products/product-3-main.png",
       ],
     },
   },
@@ -103,12 +97,10 @@ const shopData: Product[] = [
     id: 4,
     imgs: {
       thumbnails: [
-        "/images/products/product-4-bg-1.png",
-        "/images/products/product-4-bg-1.png",
+        "/images/products/product-4-main.png",
       ],
       previews: [
-        "/images/products/product-4-bg-1.png",
-        "/images/products/product-4-bg-1.png",
+        "/images/products/product-4-main.png",
       ],
     },
   }
