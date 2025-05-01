@@ -1,7 +1,7 @@
 export type Product = {
   title: string;
   description: string;
-  manufacturer: string;
+  manufacturer: "Atlas" | "Bachmann" | "MTH" | "Lionel";
   scale: "N" | "HO" | "O" | "G" | "Z";
   category: "Locomotives" | "Rolling Stock" | "Accessories" | "Scenery" | "Electronics";
   collection?: string;
