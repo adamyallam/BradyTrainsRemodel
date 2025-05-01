@@ -1,6 +1,6 @@
 const data = [
   {
-    title: "O Gauge / Scale",
+    title: "O Scale",
     id: 1,
     img: "/images/categories/categories-01.png",
   },
@@ -20,7 +20,7 @@ const data = [
     img: "/images/categories/categories-04.png",
   },
   {
-    title: "O Gauge Sets",
+    title: "Train Sets",
     id: 5,
     img: "/images/categories/categories-05.png",
   },
