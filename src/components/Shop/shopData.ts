@@ -27,7 +27,7 @@ const shopData: Product[] = [
   {
     title: "N MASTER SILVER DASH 8-40C",
     description: "The N MASTER SILVER DASH 8-40C is a high-quality model train engine designed for collectors and enthusiasts. It features intricate detailing, smooth operation, and is compatible with various N scale tracks.",
-    manufacturer: "Bachmann Trains",
+    manufacturer: "Atlas",
     scale: "N",
     category: "Locomotives",
     collection: "Master Silver Series",
@@ -37,17 +37,17 @@ const shopData: Product[] = [
     id: 1,
     imgs: {
       thumbnails: [
-        "/images/products/product-1-main.png",
+        "/images/products/atlasN-new-product-1-main.png",
       ],
       previews: [
-        "/images/products/product-1-main.png",
+        "/images/products/atlasN-new-product-1-main.png",
       ],
     },
   },
   {
     title: "N MASTER SILVER DASH 8-40C CSX",
     description: "The N MASTER SILVER DASH 8-40C CSX is a premium model train engine that showcases the iconic CSX livery. It is built for performance and realism, making it a perfect addition to any N scale layout.",
-    manufacturer: "Bachmann Trains",
+    manufacturer: "Atlas",
     scale: "N",
     category: "Locomotives",
     collection: "Master Silver Series",
@@ -57,17 +57,17 @@ const shopData: Product[] = [
     id: 2,
     imgs: {
       thumbnails: [
-        "/images/products/product-2-main.png",
+        "/images/products/atlasN-new-product-2-main.png",
       ],
       previews: [
-        "/images/products/product-2-main.png",
+        "/images/products/atlasN-new-product-2-main.png",
       ],
     },
   },
   {
     title: "N MASTER SILVER DASH 8-40C UNION PACIFIC",
     description: "The N MASTER SILVER DASH 8-40C UNION PACIFIC is a detailed model train engine that captures the essence of the Union Pacific Railroad. It features high-quality construction and is ideal for both display and operation.",
-    manufacturer: "Bachmann Trains",
+    manufacturer: "Atlas",
     scale: "N", 
     category: "Locomotives",
     collection: "Master Silver Series",
@@ -77,17 +77,17 @@ const shopData: Product[] = [
     id: 3,
     imgs: {
       thumbnails: [
-        "/images/products/product-3-main.png",
+        "/images/products/atlasN-new-product-3-main.png",
       ],
       previews: [
-        "/images/products/product-3-main.png",
+        "/images/products/atlasN-new-product-3-main.png",
       ],
     },
   },
   {
     title: "N GP-38 GOLD NORFOLK WESTERN",
     description: "The N GP-38 GOLD NORFOLK WESTERN is a premium model train engine that features the classic Norfolk Western livery. It is designed for collectors who appreciate fine details and superior performance in their N scale models.",
-    manufacturer: "Bachmann Trains",
+    manufacturer: "Atlas",
     scale: "N", 
     category: "Locomotives",
     collection: "Gold Series",
@@ -97,10 +97,10 @@ const shopData: Product[] = [
     id: 4,
     imgs: {
       thumbnails: [
-        "/images/products/product-4-main.png",
+        "/images/products/atlasN-new-product-4-main.png",
       ],
       previews: [
-        "/images/products/product-4-main.png",
+        "/images/products/atlasN-new-product-4-main.png",
       ],
     },
   }
