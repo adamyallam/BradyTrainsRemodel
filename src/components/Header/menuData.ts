@@ -43,18 +43,6 @@ export const menuData: Menu[] = [
         newTab: false,
         path: "/shop",
       },
-      {
-        id: 67,
-        title: "Buildings, Layout, & Track",
-        newTab: false,
-        path: "/shop",
-      },
-      {
-        id: 68,
-        title: "Transformers & Controllers",
-        newTab: false,
-        path: "/shop",
-      },
     ],
   },
   {
