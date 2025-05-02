@@ -1,12 +1,12 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Breadcrumb from "@/components/Common/Breadcrumb";
-import CustomSelect from "../ShopAll/CustomSelect";
-import CategoryDropdown from "../ShopAll/CategoryDropdown";
-import GenderDropdown from "../ShopAll/GenderDropdown";
-import SizeDropdown from "../ShopAll/SizeDropdown";
-import ColorsDropdwon from "../ShopAll/ColorsDropdwon";
-import PriceDropdown from "../ShopAll/PriceDropdown";
+import CustomSelect from "./CustomSelect";
+import CategoryDropdown from "./CategoryDropdown";
+import GenderDropdown from "./GenderDropdown";
+import SizeDropdown from "./SizeDropdown";
+import ColorsDropdwon from "./ColorsDropdwon";
+import PriceDropdown from "./PriceDropdown";
 import shopData from "@/components/Shop/shopData";
 import SingleGridItem from "@/components/Shop/SingleGridItem";
 import SingleListItem from "@/components/Shop/SingleListItem";
