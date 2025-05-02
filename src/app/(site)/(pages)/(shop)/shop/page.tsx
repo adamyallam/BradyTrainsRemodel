@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   // other metadata
 };
 
-const ShopWithSidebarPage = () => {
+const Shop = () => {
   return (
     <main>
-      <ShopAll />
+      <ShopAll/>
     </main>
   );
 };
 
-export default ShopWithSidebarPage;
+export default Shop;
