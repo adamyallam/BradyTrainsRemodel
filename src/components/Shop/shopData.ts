@@ -26,7 +26,7 @@ import { Product } from "@/types/product";
 const shopData: Product[] = [
   {
     title: "ATLAS N MASTER SILVER DASH 8-40C",
-    description: "The N MASTER SILVER DASH 8-40C is a high-quality model train engine designed for collectors and enthusiasts. It features intricate detailing, smooth operation, and is compatible with various N scale tracks.",
+    description: "The N MASTER SILVER DASH 8-40C is a high-quality model train engine designed for collectors and enthusiasts. It features intricate detailing, smooth operation, and compatibility with various N scale tracks, making it a must-have for hobbyists.",
     manufacturer: "Atlas",
     scale: "N",
     category: "Locomotives",
@@ -46,7 +46,7 @@ const shopData: Product[] = [
   },
   {
     title: "ATLAS N MASTER SILVER DASH 8-40C CSX",
-    description: "The N MASTER SILVER DASH 8-40C CSX is a premium model train engine that showcases the iconic CSX livery. It is built for performance and realism, making it a perfect addition to any N scale layout.",
+    description: "The N MASTER SILVER DASH 8-40C CSX is a premium model train engine showcasing the iconic CSX livery. Built for performance and realism, it is a perfect addition to any N scale layout, offering exceptional craftsmanship and detail.",
     manufacturer: "Atlas",
     scale: "N",
     category: "Locomotives",
@@ -66,7 +66,7 @@ const shopData: Product[] = [
   },
   {
     title: "ATLAS N MASTER SILVER DASH 8-40C UNION PACIFIC",
-    description: "The N MASTER SILVER DASH 8-40C UNION PACIFIC is a detailed model train engine that captures the essence of the Union Pacific Railroad. It features high-quality construction and is ideal for both display and operation.",
+    description: "The N MASTER SILVER DASH 8-40C UNION PACIFIC is a detailed model train engine capturing the essence of the Union Pacific Railroad. With high-quality construction, it is ideal for both display and operation, offering unmatched realism.",
     manufacturer: "Atlas",
     scale: "N",
     category: "Locomotives",
@@ -86,7 +86,7 @@ const shopData: Product[] = [
   },
   {
     title: "ATLAS N GP-38 GOLD NORFOLK WESTERN",
-    description: "The N GP-38 GOLD NORFOLK WESTERN is a premium model train engine that features the classic Norfolk Western livery. It is designed for collectors who appreciate fine details and superior performance in their N scale models.",
+    description: "The N GP-38 GOLD NORFOLK WESTERN is a premium model train engine featuring the classic Norfolk Western livery. Designed for collectors, it offers fine details, superior performance, and a realistic addition to any N scale model train collection.",
     manufacturer: "Atlas",
     scale: "N",
     category: "Locomotives",
@@ -106,7 +106,7 @@ const shopData: Product[] = [
   },
   {
     title: "ATLAS HO GP-38 2000-PX",
-    description: "A premium HO scale model train featuring exceptional detail and performance.",
+    description: "A premium HO scale model train featuring exceptional detail and performance. This locomotive is perfect for hobbyists seeking a realistic and high-quality addition to their model train setups, ensuring smooth operation and intricate craftsmanship.",
     manufacturer: "Atlas",
     scale: "HO",
     category: "Locomotives",
@@ -126,7 +126,7 @@ const shopData: Product[] = [
   },
   {
     title: "ATLAS HO MASTER SILVER 3000-AX",
-    description: "A high-quality HO scale locomotive with advanced features and realistic design.",
+    description: "A high-quality HO scale locomotive with advanced features and realistic design. This model train is ideal for collectors and enthusiasts who value precision, durability, and a lifelike appearance in their HO scale layouts.",
     manufacturer: "Atlas",
     scale: "HO",
     category: "Locomotives",
@@ -146,7 +146,7 @@ const shopData: Product[] = [
   },
   {
     title: "ATLAS HO EXPERT CRAFTSMAN 4000-BX",
-    description: "An expertly crafted HO scale model train for collectors and enthusiasts.",
+    description: "An expertly crafted HO scale model train for collectors and enthusiasts. This locomotive combines intricate detailing, smooth operation, and a realistic design, making it a standout piece in any model train collection.",
     manufacturer: "Atlas",
     scale: "HO",
     category: "Locomotives",
@@ -166,7 +166,7 @@ const shopData: Product[] = [
   },
   {
     title: "ATLAS HO CLASSIC DURABLE 5000-CX",
-    description: "A durable and detailed HO scale locomotive for realistic model train setups.",
+    description: "A durable and detailed HO scale locomotive for realistic model train setups. This model offers exceptional craftsmanship, smooth operation, and a lifelike appearance, making it a valuable addition to any HO scale collection.",
     manufacturer: "Atlas",
     scale: "HO",
     category: "Locomotives",
@@ -186,7 +186,7 @@ const shopData: Product[] = [
   },
   {
     title: "ATLAS HO RELIABLE GP-40 6000-DX",
-    description: "A reliable HO scale locomotive with intricate detailing and smooth operation.",
+    description: "A reliable HO scale locomotive with intricate detailing and smooth operation. This model train is designed for hobbyists who value precision and realism, offering a perfect blend of performance and aesthetic appeal.",
     manufacturer: "Atlas",
     scale: "HO",
     category: "Locomotives",
@@ -206,7 +206,7 @@ const shopData: Product[] = [
   },
   {
     title: "ATLAS HO HIGH-PERFORMANCE GP-40 7000-EX",
-    description: "A high-performance HO scale locomotive designed for serious model train enthusiasts.",
+    description: "A high-performance HO scale locomotive designed for serious model train enthusiasts. This model offers exceptional craftsmanship, smooth operation, and a realistic design, making it a standout addition to any HO scale layout.",
     manufacturer: "Atlas",
     scale: "HO",
     category: "Locomotives",
@@ -226,7 +226,7 @@ const shopData: Product[] = [
   },
   {
     title: "ATLAS N COMPACT GP-38 8000-FX",
-    description: "A compact and detailed N scale locomotive for realistic model train layouts.",
+    description: "A compact and detailed N scale locomotive for realistic model train layouts. This engine is perfect for hobbyists with limited space, offering impressive performance and intricate details in a smaller size.",
     manufacturer: "Atlas",
     scale: "N",
     category: "Locomotives",
@@ -246,7 +246,7 @@ const shopData: Product[] = [
   },
   {
     title: "ATLAS N PREMIUM GP-38 9000-GX",
-    description: "A premium N scale locomotive with exceptional craftsmanship and performance.",
+    description: "A premium N scale locomotive with exceptional craftsmanship and performance. This model train engine is designed for collectors who demand the highest quality and attention to detail in their N scale locomotives.",
     manufacturer: "Atlas",
     scale: "N",
     category: "Locomotives",
@@ -266,7 +266,7 @@ const shopData: Product[] = [
   },
   {
     title: "ATLAS N FINELY DETAILED GP-38 1000-HX",
-    description: "A finely detailed N scale locomotive for collectors and hobbyists.",
+    description: "A finely detailed N scale locomotive for collectors and hobbyists. This model offers intricate detailing, smooth operation, and is perfect for those who appreciate the finer things in model railroading.",
     manufacturer: "Atlas",
     scale: "N",
     category: "Locomotives",
@@ -286,7 +286,7 @@ const shopData: Product[] = [
   },
   {
     title: "BACHMANN HO ROBUST GP-50 1100-IX",
-    description: "A robust HO scale locomotive with realistic features and smooth operation.",
+    description: "A robust HO scale locomotive with realistic features and smooth operation. This engine is built to last and designed for hobbyists who demand durability and performance in their model trains.",
     manufacturer: "Bachmann",
     scale: "HO",
     category: "Locomotives",
@@ -306,7 +306,7 @@ const shopData: Product[] = [
   },
   {
     title: "BACHMANN HO HIGH-QUALITY GP-50 1200-JX",
-    description: "A high-quality HO scale locomotive designed for realistic model train setups.",
+    description: "A high-quality HO scale locomotive designed for realistic model train setups. This model features precision engineering, smooth operation, and is perfect for collectors who appreciate quality and detail.",
     manufacturer: "Bachmann",
     scale: "HO",
     category: "Locomotives",
@@ -326,7 +326,7 @@ const shopData: Product[] = [
   },
   {
     title: "BACHMANN N COMPACT GP-50 1300-KX",
-    description: "A compact and detailed N scale locomotive for realistic model train enthusiasts.",
+    description: "A compact and detailed N scale locomotive for realistic model train enthusiasts. This engine provides impressive power and detail in a smaller size, making it ideal for N scale layouts with limited space.",
     manufacturer: "Bachmann",
     scale: "N",
     category: "Locomotives",
@@ -346,7 +346,7 @@ const shopData: Product[] = [
   },
   {
     title: "BACHMANN N PREMIUM GP-50 1400-LX",
-    description: "A premium N scale locomotive with exceptional craftsmanship and performance.",
+    description: "A premium N scale locomotive with exceptional craftsmanship and performance. This model is for the discerning collector who values high-quality construction and realistic detailing in their model trains.",
     manufacturer: "Bachmann",
     scale: "N",
     category: "Locomotives",
@@ -366,7 +366,7 @@ const shopData: Product[] = [
   },
   {
     title: "LIONEL O PREMIUM GP-60 1500-MX",
-    description: "A premium O scale locomotive with intricate detailing and superior performance.",
+    description: "A premium O scale locomotive with intricate detailing and superior performance. This model is perfect for collectors who demand the best in quality and realism for their O scale model train layouts.",
     manufacturer: "Lionel",
     scale: "O",
     category: "Locomotives",
@@ -386,7 +386,7 @@ const shopData: Product[] = [
   },
   {
     title: "LIONEL O FINELY CRAFTED GP-60 1600-NX",
-    description: "A finely crafted O scale locomotive for collectors and hobbyists.",
+    description: "A finely crafted O scale locomotive for collectors and hobbyists. This model offers exceptional detail, smooth operation, and is designed for those who appreciate the art of model railroading.",
     manufacturer: "Lionel",
     scale: "O",
     category: "Locomotives",
@@ -406,7 +406,7 @@ const shopData: Product[] = [
   },
   {
     title: "LIONEL O DURABLE GP-60 1700-OX",
-    description: "A durable and detailed O scale locomotive for realistic model train setups.",
+    description: "A durable and detailed O scale locomotive for realistic model train setups. This engine is built to withstand the rigors of model railroading while providing smooth and reliable performance.",
     manufacturer: "Lionel",
     scale: "O",
     category: "Locomotives",
@@ -426,7 +426,7 @@ const shopData: Product[] = [
   },
   {
     title: "LIONEL O HIGH-PERFORMANCE GP-60 1800-PX",
-    description: "A high-performance O scale locomotive designed for serious model train enthusiasts.",
+    description: "A high-performance O scale locomotive designed for serious model train enthusiasts. This model provides exceptional speed, power, and detail, making it a top choice for collectors and hobbyists alike.",
     manufacturer: "Lionel",
     scale: "O",
     category: "Locomotives",
@@ -446,7 +446,7 @@ const shopData: Product[] = [
   },
   {
     title: "LIONEL O RELIABLE GP-60 1900-QX",
-    description: "A reliable O scale locomotive with intricate detailing and smooth operation.",
+    description: "A reliable O scale locomotive with intricate detailing and smooth operation. This engine is perfect for hobbyists who value consistency and quality in their model train operations.",
     manufacturer: "Lionel",
     scale: "O",
     category: "Locomotives",
@@ -466,7 +466,7 @@ const shopData: Product[] = [
   },
   {
     title: "LIONEL O FINELY DETAILED GP-60 2000-RX",
-    description: "A finely detailed O scale locomotive for collectors and hobbyists.",
+    description: "A finely detailed O scale locomotive for collectors and hobbyists. This model train engine offers superior craftsmanship, realistic detailing, and is perfect for those who demand the best in their model railroad.",
     manufacturer: "Lionel",
     scale: "O",
     category: "Locomotives",
@@ -486,7 +486,7 @@ const shopData: Product[] = [
   },
   {
     title: "LIONEL O ROBUST GP-60 2100-SX",
-    description: "A robust O scale locomotive with realistic features and smooth operation.",
+    description: "A robust O scale locomotive with realistic features and smooth operation. This engine is designed for durability and performance, making it a great choice for serious model train enthusiasts.",
     manufacturer: "Lionel",
     scale: "O",
     category: "Locomotives",
@@ -506,7 +506,7 @@ const shopData: Product[] = [
   },
   {
     title: "LIONEL O HIGH-QUALITY GP-60 2200-TX",
-    description: "A high-quality O scale locomotive designed for realistic model train setups.",
+    description: "A high-quality O scale locomotive designed for realistic model train setups. This model features top-notch materials, precision engineering, and is perfect for collectors who appreciate quality and detail.",
     manufacturer: "Lionel",
     scale: "O",
     category: "Locomotives",
@@ -526,7 +526,7 @@ const shopData: Product[] = [
   },
   {
     title: "LIONEL O COMPACT GP-60 2300-UX",
-    description: "A compact and detailed O scale locomotive for realistic model train enthusiasts.",
+    description: "A compact and detailed O scale locomotive for realistic model train enthusiasts. This engine provides impressive power and detail in a smaller size, making it ideal for O scale layouts with limited space.",
     manufacturer: "Lionel",
     scale: "O",
     category: "Locomotives",
@@ -546,7 +546,7 @@ const shopData: Product[] = [
   },
   {
     title: "LIONEL O PREMIUM CRAFTSMAN GP-60 2400-VX",
-    description: "A premium O scale locomotive with exceptional craftsmanship and performance.",
+    description: "A premium O scale locomotive with exceptional craftsmanship and performance. This model is for the discerning collector who values high-quality construction and realistic detailing in their model trains.",
     manufacturer: "Lionel",
     scale: "O",
     category: "Locomotives",
@@ -566,7 +566,7 @@ const shopData: Product[] = [
   },
   {
     title: "MTH O PREMIUM GP-70 2500-WX",
-    description: "A premium O scale locomotive with intricate detailing and superior performance.",
+    description: "A premium O scale locomotive with intricate detailing and superior performance. This model is perfect for collectors who demand the best in quality and realism for their O scale model train layouts.",
     manufacturer: "MTH",
     scale: "O",
     category: "Locomotives",
@@ -586,7 +586,7 @@ const shopData: Product[] = [
   },
   {
     title: "MTH O DURABLE GP-70 2600-XX",
-    description: "A durable and detailed O scale locomotive for realistic model train setups.",
+    description: "A durable and detailed O scale locomotive for realistic model train setups. This engine is built to withstand the rigors of model railroading while providing smooth and reliable performance.",
     manufacturer: "MTH",
     scale: "O",
     category: "Locomotives",
@@ -606,7 +606,7 @@ const shopData: Product[] = [
   },
   {
     title: "MTH O HIGH-PERFORMANCE GP-70 2700-YX",
-    description: "A high-performance O scale locomotive designed for serious model train enthusiasts.",
+    description: "A high-performance O scale locomotive designed for serious model train enthusiasts. This model provides exceptional speed, power, and detail, making it a top choice for collectors and hobbyists alike.",
     manufacturer: "MTH",
     scale: "O",
     category: "Locomotives",
@@ -626,7 +626,7 @@ const shopData: Product[] = [
   },
   {
     title: "MTH O RELIABLE GP-70 2800-ZX",
-    description: "A reliable O scale locomotive with intricate detailing and smooth operation.",
+    description: "A reliable O scale locomotive with intricate detailing and smooth operation. This engine is perfect for hobbyists who value consistency and quality in their model train operations.",
     manufacturer: "MTH",
     scale: "O",
     category: "Locomotives",
@@ -646,7 +646,7 @@ const shopData: Product[] = [
   },
   {
     title: "MTH O FINELY DETAILED GP-70 2900-AA",
-    description: "A finely detailed O scale locomotive for collectors and hobbyists.",
+    description: "A finely detailed O scale locomotive for collectors and hobbyists. This model train engine offers superior craftsmanship, realistic detailing, and is perfect for those who demand the best in their model railroad.",
     manufacturer: "MTH",
     scale: "O",
     category: "Locomotives",
