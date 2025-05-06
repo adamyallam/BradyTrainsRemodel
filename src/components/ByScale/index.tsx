@@ -2,15 +2,17 @@
 import React, { useState, useEffect } from "react";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import CustomSelect from "./CustomSelect";
-import ManufacturerDropdown from "./ManufacturerDropdown";
+import ScaleDropdown from "./ScaleDropdown";
 import PriceDropdown from "./PriceDropdown";
 import shopData from "@/components/Shop/shopData";
 import SingleGridItem from "@/components/Shop/SingleGridItem";
+import SingleListItem from "@/components/Shop/SingleListItem";
 
-const ByManufacturer = () => {
+
+const ByScale = () => {
   const [productSidebar, setProductSidebar] = useState(false);
   const [stickyMenu, setStickyMenu] = useState(false);
-  const [selectedManufacturers, setSelectedManufacturers] = useState([]);
+  const [selectedScales, setSelectedScales] = useState([]);
   const [priceRange, setPriceRange] = useState({from: 0, to: 400});
 
   const handleStickyMenu = () => {
@@ -22,7 +24,7 @@ const ByManufacturer = () => {
   };
 
   const clearAllFilters = () => {
-    setSelectedManufacturers([]);
+    setSelectedScales([]);
     setPriceRange({from: 0, to: 400});
   };
 
@@ -32,15 +34,23 @@ const ByManufacturer = () => {
     { label: "Price: Low to High", value: "2" },
   ];
 
-  const manufacturers = shopData.reduce((acc, product) => {
-    const manufacturer = acc.find(m => m.name === product.manufacturer);
-    if (manufacturer) {
-      manufacturer.products += 1;
+  const scales = shopData.reduce((acc, product) => {
+    const scale = acc.find(s => s.name === product.scale);
+    if (scale) {
+      scale.products += 1;
     } else {
-      acc.push({ name: product.manufacturer, products: 1, isRefined: false });
+      acc.push({ name: product.scale, products: 1 });
     }
     return acc;
   }, []);
+
+  // Ensure all scales are represented, even if they have 0 products
+  const allScales = ["N", "HO", "O", "G", "Z", "S"];
+  allScales.forEach(scale => {
+    if (!scales.find(s => s.name === scale)) {
+      scales.push({ name: scale, products: 0 });
+    }
+  });
 
   useEffect(() => {
     window.addEventListener("scroll", handleStickyMenu);
@@ -64,8 +74,8 @@ const ByManufacturer = () => {
   return (
     <>
       <Breadcrumb
-        title={"Shop by Manufacturer"}
-        pages={["shop", "/", "Shop by Manufacturer"]}
+        title={"Shop By Scale"}
+        pages={["shop", "/", "Shop By Scale"]}
       />
       <section className="overflow-hidden relative pb-20 pt-5 lg:pt-20 xl:pt-28 bg-[#f3f4f6]">
         <div className="max-w-[1170px] w-full mx-auto px-4 sm:px-8 xl:px-0">
@@ -118,8 +128,8 @@ const ByManufacturer = () => {
                     </div>
                   </div>
 
-                  {/* <!-- category box --> */}
-                  <ManufacturerDropdown manufacturers={manufacturers} selectedManufacturers={selectedManufacturers} setSelectedManufacturers={setSelectedManufacturers}/>
+                  {/* <!-- Scale box --> */}
+                  <ScaleDropdown scales={scales} selectedScales={selectedScales} setSelectedScales={setSelectedScales} />
 
                   {/* // <!-- price range box --> */}
                   <PriceDropdown priceRange={priceRange} setPriceRange={setPriceRange}/>
@@ -137,7 +147,7 @@ const ByManufacturer = () => {
                     <CustomSelect options={options} />
 
                     <p>
-                      Showing All Products
+                      Showing All New Items
                     </p>
                   </div>
 
@@ -163,4 +173,4 @@ const ByManufacturer = () => {
   );
 };
 
-export default ByManufacturer;
+export default ByScale;
