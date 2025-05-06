@@ -1,9 +1,9 @@
 import React from "react";
-import ShopAll from "@/components/ShopAll";
+import ByManufacturer from "@/components/ByManufacturer";
 
 import { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Shop Page | NextCommerce Nextjs E-commerce template",
+  title: "Shop By Manufacturer",
   description: "This is Shop Page for NextCommerce Template",
   // other metadata
 };
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const ShopByManufacturer = () => {
   return (
     <main>
-      <ShopAll />
+      <ByManufacturer />
     </main>
   );
 };
