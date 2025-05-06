@@ -61,13 +61,13 @@ export const menuData: Menu[] = [
         id: 71,
         title: "Tent Sales",
         newTab: false,
-        path: "/blogs/blog-details",
+        path: "/blogs/tent-sales",
       },
       {
         id: 72,
         title: "Train Shows",
         newTab: false,
-        path: "/blogs/blog-details",
+        path: "/blogs/train-shows",
       }
     ],
   },
