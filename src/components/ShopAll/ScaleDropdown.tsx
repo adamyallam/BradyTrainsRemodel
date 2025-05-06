@@ -1,23 +1,21 @@
 "use client";
 import React, { useState } from "react";
 
-const GenderItem = ({ category }) => {
-  const [selected, setSelected] = useState(false);
+const ScaleItem = ({ scale, isSelected, toggleScale }) => {
+
   return (
     <button
-      className={`${
-        selected && "text-red-dark"
-      } group flex items-center justify-between ease-out duration-200 hover:text-red-dark `}
-      onClick={() => setSelected(!selected)}
+      className={`${isSelected && "text-red-dark"
+        } group flex items-center justify-between ease-out duration-200 hover:text-red-dark `}
+      onClick={() => toggleScale(scale.name)}
     >
       <div className="flex items-center gap-2">
         <div
-          className={`cursor-pointer flex items-center justify-center rounded w-4 h-4 border ${
-            selected ? "border-red bg-red" : "bg-white border-gray-3"
-          }`}
+          className={`cursor-pointer flex items-center justify-center rounded w-4 h-4 border ${isSelected ? "border-red bg-red" : "bg-white border-gray-3"
+            }`}
         >
           <svg
-            className={selected ? "block" : "hidden"}
+            className={isSelected ? "block" : "hidden"}
             width="10"
             height="10"
             viewBox="0 0 10 10"
@@ -34,38 +32,43 @@ const GenderItem = ({ category }) => {
           </svg>
         </div>
 
-        <span>{category.name}</span>
+        <span>{scale.name}</span>
       </div>
 
       <span
-        className={`${
-          selected ? "text-white bg-red" : "bg-gray-2"
-        } inline-flex rounded-[30px] text-custom-xs px-2 ease-out duration-200 group-hover:text-white group-hover:bg-red`}
+        className={`${isSelected ? "text-white bg-red" : "bg-gray-2"
+          } inline-flex rounded-[30px] text-custom-xs px-2 ease-out duration-200 group-hover:text-white group-hover:bg-red`}
       >
-        {category.products}
+        {scale.products}
       </span>
     </button>
   );
 };
 
-const GenderDropdown = ({ genders }) => {
+const ScaleDropdown = ({ scales, selectedScales, setSelectedScales }) => {
   const [toggleDropdown, setToggleDropdown] = useState(true);
+
+  const toggleScale = (name) => {
+    if (selectedScales.includes(name)) {
+      setSelectedScales(selectedScales.filter(s => s !== name));
+    } else {
+      setSelectedScales([...selectedScales, name]);
+    }
+  };
 
   return (
     <div className="bg-white shadow-1 rounded-lg">
       <div
         onClick={() => setToggleDropdown(!toggleDropdown)}
-        className={`cursor-pointer flex items-center justify-between py-3 pl-6 pr-5.5 ${
-          toggleDropdown && "shadow-filter"
-        }`}
+        className={`cursor-pointer flex items-center justify-between py-3 pl-6 pr-5.5 ${toggleDropdown && "shadow-filter"
+          }`}
       >
-        <p className="text-dark">Gender</p>
+        <p className="text-dark">Scale</p>
         <button
           onClick={() => setToggleDropdown(!toggleDropdown)}
-          aria-label="button for gender dropdown"
-          className={`text-dark ease-out duration-200 ${
-            toggleDropdown && "rotate-180"
-          }`}
+          aria-label="button for scale dropdown"
+          className={`text-dark ease-out duration-200 ${toggleDropdown && "rotate-180"
+            }`}
         >
           <svg
             className="fill-current"
@@ -87,16 +90,15 @@ const GenderDropdown = ({ genders }) => {
 
       {/* <!-- dropdown menu --> */}
       <div
-        className={`flex-col gap-3 py-6 pl-6 pr-5.5 ${
-          toggleDropdown ? "flex" : "hidden"
-        }`}
+        className={`flex-col gap-3 py-6 pl-6 pr-5.5 ${toggleDropdown ? "flex" : "hidden"
+          }`}
       >
-        {genders.map((gender, key) => (
-          <GenderItem key={key} category={gender} />
+        {scales.map((scale, key) => (
+          <ScaleItem key={key} scale={scale} isSelected={selectedScales.includes(scale.name)} toggleScale={toggleScale} />
         ))}
       </div>
     </div>
   );
 };
 
-export default GenderDropdown;
+export default ScaleDropdown;
