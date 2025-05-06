@@ -9,7 +9,7 @@ export const menuData: Menu[] = [
   },
   {
     id: 2,
-    title: "New Items",
+    title: "New Arrivals",
     newTab: false,
     path: "/shop-new-items",
   },
