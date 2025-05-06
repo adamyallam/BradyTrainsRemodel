@@ -1,5 +1,5 @@
 import React from "react";
-import ShopAll from "@/components/ShopAll";
+import ByTrainSets from "@/components/ByTrainSets";
 
 import { Metadata } from "next";
 export const metadata: Metadata = {
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const ShopTrainSets = () => {
   return (
     <main>
-      <ShopAll />
+      <ByTrainSets />
     </main>
   );
 };
