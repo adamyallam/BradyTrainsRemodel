@@ -112,7 +112,7 @@ input[type='search']::-webkit-search-results-decoration {
 }
 
 .custom-select-2 .select-selected {
-  @apply bg-white rounded-md !border-r text-dark-4 py-[1px] pl-3 pr-9;
+  @apply bg-white rounded-md !border-r text-dark-4 py-[1px] pl-4 pr-10;
 }
 .custom-select-2 .select-selected:after {
   content: url("data:image/svg+xml,%3Csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.41444 1.03563L1.41443 1.03565L1.41725 1.0384L6.76725 6.2634L7.00126 6.49194L7.23418 6.26229L12.5842 0.987287L12.5842 0.987293L12.5858 0.985629C12.6807 0.890804 12.8196 0.890804 12.9144 0.985629C13.009 1.08018 13.0093 1.21861 12.9153 1.31341C12.915 1.31368 12.9147 1.31395 12.9144 1.31422L7.16652 6.96217L7.16651 6.96216L7.16444 6.96422C7.06814 7.06053 7.02327 7.06659 7.00015 7.06659C6.94122 7.06659 6.89018 7.05216 6.8204 6.99902L1.08502 1.36339C0.991024 1.26859 0.991301 1.13018 1.08585 1.03563C1.18067 0.940804 1.31962 0.940804 1.41444 1.03563Z' fill='%238D93A5' stroke='%238D93A5' stroke-width='0.666667'/%3E%3C/svg%3E%0A");

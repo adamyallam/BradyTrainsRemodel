@@ -2,23 +2,22 @@
 
 import { useState } from "react";
 
-const CategoryItem = ({ category }) => {
-  const [selected, setSelected] = useState(false);
+const ManufacturerItem = ({ manufacturer, isSelected, toggleManufacturer}) => {
   return (
     <button
       className={`${
-        selected && "text-red-dark"
+        isSelected && "text-red-dark"
       } group flex items-center justify-between ease-out duration-200 hover:text-red-dark `}
-      onClick={() => setSelected(!selected)}
+      onClick={() => toggleManufacturer(manufacturer.name)}
     >
       <div className="flex items-center gap-2">
         <div
           className={`cursor-pointer flex items-center justify-center rounded w-4 h-4 border ${
-            selected ? "border-red bg-red" : "bg-white border-gray-3"
+            isSelected ? "border-red bg-red" : "bg-white border-gray-3"
           }`}
         >
           <svg
-            className={selected ? "block" : "hidden"}
+            className={isSelected ? "block" : "hidden"}
             width="10"
             height="10"
             viewBox="0 0 10 10"
@@ -35,22 +34,30 @@ const CategoryItem = ({ category }) => {
           </svg>
         </div>
 
-        <span>{category.name}</span>
+        <span>{manufacturer.name}</span>
       </div>
 
       <span
         className={`${
-          selected ? "text-white bg-red" : "bg-gray-2"
+          isSelected ? "text-white bg-red" : "bg-gray-2"
         } inline-flex rounded-[30px] text-custom-xs px-2 ease-out duration-200 group-hover:text-white group-hover:bg-red`}
       >
-        {category.products}
+        {manufacturer.products}
       </span>
     </button>
   );
 };
 
-const CategoryDropdown = ({ categories }) => {
+const ManufacturerDropdown = ({ manufacturers, selectedManufacturers, setSelectedManufacturers }) => {
   const [toggleDropdown, setToggleDropdown] = useState(true);
+
+  const toggleManufacturer = (name) => {
+    if (selectedManufacturers.includes(name)) {
+      setSelectedManufacturers(selectedManufacturers.filter(s => s !== name));
+    } else {
+      setSelectedManufacturers([...selectedManufacturers, name]);
+    }
+  };
 
   return (
     <div className="bg-white shadow-1 rounded-lg">
@@ -63,9 +70,9 @@ const CategoryDropdown = ({ categories }) => {
           toggleDropdown && "shadow-filter"
         }`}
       >
-        <p className="text-dark">Category</p>
+        <p className="text-dark">Manufacturer</p>
         <button
-          aria-label="button for category dropdown"
+          aria-label="button for manufacturer dropdown"
           className={`text-dark ease-out duration-200 ${
             toggleDropdown && "rotate-180"
           }`}
@@ -95,12 +102,12 @@ const CategoryDropdown = ({ categories }) => {
           toggleDropdown ? "flex" : "hidden"
         }`}
       >
-        {categories.map((category, key) => (
-          <CategoryItem key={key} category={category} />
+        {manufacturers.map((manufacturer, key) => (
+          <ManufacturerItem key={key} manufacturer={manufacturer} isSelected={selectedManufacturers.includes(manufacturer.name)} toggleManufacturer={toggleManufacturer}/>
         ))}
       </div>
     </div>
   );
 };
 
-export default CategoryDropdown;
+export default ManufacturerDropdown;

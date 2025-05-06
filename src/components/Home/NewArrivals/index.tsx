@@ -39,7 +39,7 @@ const NewArrival = () => {
           </div>
 
           <Link
-            href="/shop-with-sidebar"
+            href="/shop-new-items"
             className="inline-flex font-medium text-custom-sm py-2.5 px-7 rounded-md border-gray-3 border bg-gray-1 text-dark ease-out duration-200 hover:bg-dark hover:text-white hover:border-transparent"
           >
             View All
@@ -48,9 +48,12 @@ const NewArrival = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-7.5 gap-y-9">
           {/* <!-- New Arrivals item --> */}
-          {shopData.map((item, key) => (
-            <ProductItem item={item} key={key} />
-          ))}
+          {shopData
+            .filter((item) => item.collection === "New Arrivals")
+            .slice(0, 4)
+            .map((item, key) => (
+              <ProductItem item={item} key={key} />
+            ))}
         </div>
       </div>
     </section>
