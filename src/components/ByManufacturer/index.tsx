@@ -137,7 +137,7 @@ const ByManufacturer = () => {
                     <CustomSelect options={options} />
 
                     <p>
-                      Showing All Products
+                      Showing All Products By Manufacturer
                     </p>
                   </div>
 

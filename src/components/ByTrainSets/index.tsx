@@ -163,7 +163,7 @@ const ByTrainSets = () => {
                     <CustomSelect options={options} />
 
                     <p>
-                      Showing All New Items
+                      Showing All Train Sets
                     </p>
                   </div>
 

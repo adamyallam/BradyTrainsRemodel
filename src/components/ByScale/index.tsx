@@ -147,7 +147,7 @@ const ByScale = () => {
                     <CustomSelect options={options} />
 
                     <p>
-                      Showing All New Items
+                      Showing All Products By Scale
                     </p>
                   </div>
 
