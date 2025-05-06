@@ -6,13 +6,13 @@ import Link from "next/link";
 const TrainShows = () => {
   return (
     <>
-      <Breadcrumb title={"Blog Details"} pages={["blog details"]} />
+      <Breadcrumb title={"Train Shows"} pages={["Train Shows"]} />
       <section className="overflow-hidden py-20 bg-gray-2">
         <div className="max-w-[750px] w-full mx-auto px-4 sm:px-8 xl:px-0">
           <div className="rounded-[10px] overflow-hidden mb-7.5">
             <Image
               className="rounded-[10px]"
-              src="/images/blog/blog-details-01.jpg"
+              src="/images/blog/blog-01.jpg"
               alt="details"
               width={750}
               height={477}
@@ -34,74 +34,43 @@ const TrainShows = () => {
             </span>
 
             <h2 className="font-medium text-dark text-xl lg:text-2xl xl:text-custom-4xl mb-4">
-              What information is needed for shipping?
+              Discover the Magic of Train Shows!
             </h2>
 
             <p className="mb-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-              sit amet eros ac ipsum egestas dapibus. Vivamus gravida, ex non
-              placerat tincidunt, lorem felis facilisis tellus, vitae bibendum
-              purus felis eget tellus. In non rutrum ipsum. Morbi ut dui ante.
+              Step into the fascinating world of train shows, where enthusiasts and
+              collectors come together to celebrate their love for model trains.
+              Experience the excitement of live demonstrations, intricate layouts, and
+              rare collectibles.
             </p>
 
             <p className="mb-6">
-              Nunc faucibus libero sem, quis placerat nisl pellentesque eget.
-              Morbi porta velit ut leo sollicitudin, a faucibus purus faucibus.
-              Maecenas mollis dui nec metus euismod, sed aliquam risus luctus.
+              Train shows are the perfect opportunity to connect with fellow hobbyists,
+              learn from experts, and discover the latest trends in the model train
+              community. Whether you're a seasoned collector or a curious newcomer,
+              there's something for everyone.
             </p>
 
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-              enim lobortis scelerisque fermentum. Neque sodales ut etiam sit
-              amet. Ligula ullamcorper malesuada proin libero nunc consequat
-              interdum varius. Quam pellentesque nec nam aliquam sem et tortor
-              consequat.
+              Don't miss out on the chance to explore vendor booths, participate in
+              workshops, and witness the artistry of model train displays. Bring your
+              family and friends for a day filled with fun, learning, and inspiration.
             </p>
 
             <div className="mt-7.5">
               <h3 className="font-medium text-dark text-lg xl:text-[26px] xl:leading-[34px] mb-6">
-                Digital marketplace for Ui/Ux designers.
+                Highlights of the Train Show:
               </h3>
 
               <ul className="list-disc pl-6">
-                <li>Consectetur adipiscing elit in voluptate velit.</li>
-                <li>Mattis vulputate cupidatat.</li>
-                <li>
-                  Vulputate enim nulla aliquet porttitor odio pellentesque
-                </li>
-                <li>Ligula ullamcorper malesuada proin</li>
+                <li>Live demonstrations of model train setups.</li>
+                <li>Workshops and tutorials for all skill levels.</li>
+                <li>Exclusive access to rare and vintage train models.</li>
+                <li>Interactive activities for kids and families.</li>
               </ul>
             </div>
 
-            <div className="rounded-xl bg-white pt-7.5 pb-6 px-4 sm:px-7.5 my-7.5">
-              <p className="italic text-dark text-center">
-                ‘‘Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                do eiusmod incididunt utionals labore et dolore magna aliqua
-                quis fermentum,,
-              </p>
-
-              <a
-                href="#"
-                className="flex items-center justify-center gap-3 mt-5.5"
-              >
-                <div className="flex w-12 h-12 rounded-full overflow-hidden">
-                  {/* <Image
-                    src="/images/users/user-04.jpg"
-                    alt="user"
-                    width={48}
-                    height={48}
-                  /> */}
-                </div>
-
-                <div>
-                  <h4 className="text-dark text-custom-sm">Jhon Drineo</h4>
-                  <p className="text-custom-xs">Entroprenor</p>
-                </div>
-              </a>
-            </div>
-
-            <p className="mb-6">
+            <p className="mb-6 mt-5">
               consectetur adipiscing elit in voluptate velit esse cillum dolore
               eu fugiat nulla pariatur. Excepteur sint occaecat mattis vulputate
               cupidatat.
