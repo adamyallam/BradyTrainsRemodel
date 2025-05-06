@@ -42,8 +42,17 @@ const SingleGridItem = ({ item }: { item: Product }) => {
 
   return (
     <div className="group">
-      <div className="relative overflow-hidden flex items-center justify-center rounded-lg bg-white shadow-1 min-h-[200px] md:min-h-[270px] mb-4">
-        <Image src={item.imgs.previews[0]} alt="" width={225} height={225} />
+      <div className="relative overflow-hidden flex items-center justify-center rounded-lg hover:cursor-pointer bg-white group-hover:bg-gray-3 transition-colors duration-300 shadow-1 min-h-[200px] md:min-h-[270px] mb-4">
+        <Image onClick={() => {
+          openModal();
+          handleQuickViewUpdate();
+        }}
+          src={item.imgs.previews[0]}
+          alt=""
+          width={225}
+          height={225}
+          className=""
+        />
 
         <div className="absolute left-0 bottom-0 translate-y-full w-full flex items-center justify-center gap-2.5 pb-5 ease-linear duration-200 group-hover:translate-y-0">
           <button
@@ -147,9 +156,14 @@ const SingleGridItem = ({ item }: { item: Product }) => {
         <p className="text-custom-sm">({item.reviews})</p>
       </div>
 
-      <h3 className="font-medium text-dark ease-out duration-200 hover:text-red-dark mb-1.5">
-        <Link href="/shop-details"> {item.title} </Link>
-      </h3>
+      <button
+        onClick={() => {
+          openModal();
+          handleQuickViewUpdate();
+        }}
+        className="text-left font-medium text-dark ease-out duration-200 hover:text-red-dark mb-1.5">
+        {item.title}
+      </button>
 
       <span className="flex items-center gap-2 font-medium text-lg">
         <span className="text-dark">${item.discountedPrice}</span>
