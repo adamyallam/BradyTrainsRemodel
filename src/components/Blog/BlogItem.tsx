@@ -6,7 +6,7 @@ import Link from "next/link";
 const BlogItem = ({ blog }: { blog: BlogItemTypes }) => {
   return (
     <div className="shadow-1 bg-white rounded-xl px-4 sm:px-5 pt-5 pb-4">
-      <Link href="/blogs/blog-details" className="rounded-md overflow-hidden">
+      <Link href="/blogs/train-shows" className="rounded-md overflow-hidden">
         <Image
           src={blog.img}
           alt="blog"
