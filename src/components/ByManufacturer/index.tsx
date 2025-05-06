@@ -3,12 +3,9 @@ import React, { useState, useEffect } from "react";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import CustomSelect from "./CustomSelect";
 import ManufacturerDropdown from "./ManufacturerDropdown";
-import ScaleDropdown from "./ScaleDropdown";
 import PriceDropdown from "./PriceDropdown";
 import shopData from "@/components/Shop/shopData";
 import SingleGridItem from "@/components/Shop/SingleGridItem";
-import SingleListItem from "@/components/Shop/SingleListItem";
-
 
 const ByManufacturer = () => {
   const [productSidebar, setProductSidebar] = useState(false);
