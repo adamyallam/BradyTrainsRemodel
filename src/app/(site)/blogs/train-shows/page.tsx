@@ -1,4 +1,4 @@
-import BlogDetails from "@/components/BlogDetails";
+import TrainShows from "@/components/BlogDetails/TrainShows";
 import React from "react";
 
 import { Metadata } from "next";
@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   // other metadata
 };
 
-const BlogDetailsPage = () => {
+const BlogTrainShows = () => {
   return (
     <main>
-      <BlogDetails />
+      <TrainShows />
     </main>
   );
 };
 
-export default BlogDetailsPage;
+export default BlogTrainShows;

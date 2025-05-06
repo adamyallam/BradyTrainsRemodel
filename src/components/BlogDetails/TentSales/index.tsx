@@ -1,9 +1,9 @@
 import React from "react";
-import Breadcrumb from "../Common/Breadcrumb";
+import Breadcrumb from "@/components/Common/Breadcrumb";
 import Image from "next/image";
 import Link from "next/link";
 
-const BlogDetails = () => {
+const TentSales = () => {
   return (
     <>
       <Breadcrumb title={"Blog Details"} pages={["blog details"]} />
@@ -253,4 +253,4 @@ const BlogDetails = () => {
   );
 };
 
-export default BlogDetails;
+export default TentSales;
