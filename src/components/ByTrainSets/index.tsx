@@ -37,15 +37,10 @@ const ByTrainSets = () => {
     setPriceRange({ from: 0, to: 400 });
   };
 
-  const manufacturers = shopData.reduce((acc, product) => {
-    const manufacturer = acc.find(m => m.name === product.manufacturer);
-    if (manufacturer) {
-      manufacturer.products += 1;
-    } else {
-      acc.push({ name: product.manufacturer, products: 1, isRefined: false });
-    }
-    return acc;
-  }, []);
+  const manufacturers = ["Atlas", "Lionel", "MTH", "Bachmann"].map(manufacturer => {
+    const productCount = shopData.filter(item => item.collection === "Train Sets" && item.manufacturer === manufacturer).length;
+    return { name: manufacturer, products: productCount, isRefined: false };
+  });
 
   const scales = shopData.reduce((acc, product) => {
     const scale = acc.find(s => s.name === product.scale);
