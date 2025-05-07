@@ -8,11 +8,14 @@ type InitialState = {
 const initialState = {
   value: {
     title: "",
+    description: "",
+    manufacturer: "All Brands",
+    scale: "All Scales",
+    category: "All Categories",
+    collection: "",
     reviews: 0,
     price: 0,
     discountedPrice: 0,
-    img: "",
-    images: [],
     id: 0,
     imgs: { thumbnails: [], previews: [] },
   },
