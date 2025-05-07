@@ -85,7 +85,7 @@ const Header = () => {
           {/* <!-- header top left --> */}
           <div className="xl:w-auto flex-col sm:flex-row w-full flex sm:justify-evenly xs:justify-between sm:items-center gap-5 sm:gap-10">
             <Link className="flex-shrink-0" href="/">
-              <h1 className="text-red-dark font-bold flex-shrink-0">Brady's Train Outlet</h1>
+              <h1 className="text-red-dark font-bold flex-shrink-0">Brady&apos;s Train Outlet</h1>
               {/* <Image
                 src="/images/logo/logo.svg"
                 alt="Logo"

@@ -52,7 +52,7 @@ const TrainShows = () => {
             </p>
 
             <p>
-              Don't miss out on the chance to explore vendor booths, participate in
+              Don&apos;t miss out on the chance to explore vendor booths, participate in
               workshops, and witness the artistry of model train displays. Bring your
               family and friends for a day filled with fun, learning, and inspiration.
             </p>

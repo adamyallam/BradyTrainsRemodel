@@ -45,7 +45,7 @@ const TentSales = () => {
 
             <p className="mb-6">
               Our tent sale features exclusive discounts on top brands, rare finds,
-              and limited-edition items. Don't miss this opportunity to expand your
+              and limited-edition items. Don&apos;t miss this opportunity to expand your
               collection or find the perfect gift for the train enthusiast in your
               life.
             </p>
