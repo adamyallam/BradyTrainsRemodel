@@ -46,6 +46,8 @@ const PriceDropdown = ({ priceRange, setPriceRange }) => {
               id="range-slider-gradient"
               className="margin-lg"
               step={'any'}
+              min={0}
+              max={400}
               value={[priceRange.from, priceRange.to]}
               onInput={(e) =>
                 setPriceRange({from: Math.floor(e[0]), to: Math.ceil(e[1])})
