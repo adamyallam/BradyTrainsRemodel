@@ -8,6 +8,7 @@ import PriceDropdown from "./PriceDropdown";
 import shopData from "@/components/Shop/shopData";
 import SingleGridItem from "@/components/Shop/SingleGridItem";
 import { useSearchParams } from "next/navigation";
+import Link from "next/link";
 
 const ShopAll = () => {
   const [productSidebar, setProductSidebar] = useState(false);
@@ -117,6 +118,8 @@ const ShopAll = () => {
 
     return filteredProducts;
   };
+
+  const filtered = filterProducts(shopData);
 
   useEffect(() => {
     window.addEventListener("scroll", handleStickyMenu);
@@ -238,11 +241,24 @@ const ShopAll = () => {
               </div>
 
               {/* <!-- Products Grid Tab Content Start --> */}
-              <div className="grid grid-cols-2 lg:grid-cols-3 gap-x-7.5 gap-y-9">
-                {filterProducts(shopData).map((item, key) => (
-                  <SingleGridItem item={item} key={key} />
-                ))}
-              </div>
+              {filtered.length > 0 ? (
+                <div className="grid grid-cols-2 lg:grid-cols-3 gap-x-7.5 gap-y-9">
+                  {filterProducts(shopData).map((item, key) => (
+                    <SingleGridItem item={item} key={key} />
+                  ))}
+                </div>
+              ) : (
+                <div className="text-center py-10">
+                  <h2 className="text-2xl font-bold">No products found</h2>
+                  <p className="mt-4 mb-8 text-gray-500">
+                    Try adjusting your filters or search term.
+                  </p>
+                  <Link onClick={clearAllFilters} href="/shop" className="bg-red-dark text-white py-2 px-4 rounded hover:bg-red-light">
+                      Back to Shop
+                  </Link>
+                </div>
+              )}
+              {/* // <!-- Pagination --> */}
               {/* <!-- Products Grid Tab Content End --> */}
             </div>
             {/* // <!-- Content End --> */}
