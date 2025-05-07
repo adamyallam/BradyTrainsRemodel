@@ -42,7 +42,8 @@ const ProductItem = ({ item }: { item: Product }) => {
   };
 
   const handleProductDetails = () => {
-    dispatch(updateproductDetails({ ...item }));
+    const searchQuery = encodeURIComponent(item.title);
+    window.location.href = `/shop?query=${searchQuery}`;
   };
 
   return (
@@ -153,10 +154,10 @@ const ProductItem = ({ item }: { item: Product }) => {
       </div>
 
       <h3
-        className="font-medium text-dark ease-out duration-200 hover:text-red-dark mb-1.5"
-        onClick={() => handleProductDetails()}
+        className="hover:cursor-pointer font-medium text-dark ease-out duration-200 hover:text-red-dark mb-1.5"
+        onClick={handleProductDetails}
       >
-        <Link href="/shop-details"> {item.title} </Link>
+        {item.title}
       </h3>
 
       <span className="flex items-center gap-2 font-medium text-lg">
