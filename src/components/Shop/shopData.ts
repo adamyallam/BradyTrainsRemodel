@@ -25,7 +25,7 @@ import { Product } from "@/types/product";
 
 const shopData: Product[] = [
   {
-    title: "ATLAS N MASTER SILVER DASH 8-40C",
+    title: "ATLAS N MASTER SILVER DASH 8-40C CN",
     description: "The N MASTER SILVER DASH 8-40C is a high-quality model train engine designed for collectors and enthusiasts. It features intricate detailing, smooth operation, and compatibility with various N scale tracks, making it a must-have for hobbyists.",
     manufacturer: "Atlas",
     scale: "N",
