@@ -5,12 +5,13 @@ import CustomSelect from "./CustomSelect";
 import { menuData } from "./menuData";
 import Dropdown from "./Dropdown";
 import { useAppSelector } from "@/redux/store";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { setSearchQuery } from "@/redux/features/search-slice";
 import { selectTotalPrice } from "@/redux/features/cart-slice";
 import { useCartModalContext } from "@/app/context/CartSidebarModalContext";
+import { useRouter } from "next/navigation";
 
 const Header = () => {
-  const [searchQuery, setSearchQuery] = useState("");
   const [navigationOpen, setNavigationOpen] = useState(false);
   const [stickyMenu, setStickyMenu] = useState(false);
   const { openCartModal } = useCartModalContext();
@@ -18,22 +19,10 @@ const Header = () => {
   const product = useAppSelector((state) => state.cartReducer.items);
   const totalPrice = useSelector(selectTotalPrice);
 
-  const handleOpenCartModal = () => {
-    openCartModal();
-  };
+  const dispatch = useDispatch();
+  const searchQuery = useAppSelector((state) => state.search.query);
 
-  // Sticky menu
-  const handleStickyMenu = () => {
-    if (window.scrollY >= 80) {
-      setStickyMenu(true);
-    } else {
-      setStickyMenu(false);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleStickyMenu);
-  });
+  const router = useRouter();
 
   const options = [
     { label: "All Scales", value: "0" },
@@ -52,6 +41,35 @@ const Header = () => {
     { label: "MTH", value: "3" },
     { label: "Bachmann", value: "4" },
   ];
+
+  const [selectedOption, setSelectedOption] = useState(options[0]);
+  const [selectedSecondaryOption, setSelectedSecondaryOption] = useState(secondaryOptions[0]);
+
+  const handleOpenCartModal = () => {
+    openCartModal();
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const params = new URLSearchParams();
+    if (searchQuery.trim()) params.set("query", searchQuery.trim());
+    if (selectedOption.value !== "0") params.set("scale", selectedOption.label);
+    if (selectedSecondaryOption.value !== "0") params.set("brand", selectedSecondaryOption.label);
+    router.push(`/shop?${params.toString()}`);
+  }
+
+  // Sticky menu
+  const handleStickyMenu = () => {
+    if (window.scrollY >= 80) {
+      setStickyMenu(true);
+    } else {
+      setStickyMenu(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleStickyMenu);
+  });
 
   return (
     <header
@@ -77,15 +95,15 @@ const Header = () => {
             </Link>
 
             <div className="max-w-[475px] w-full">
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div className="flex items-center">
-                  <CustomSelect options={options} secondaryOptions={secondaryOptions} />
+                  <CustomSelect options={options} secondaryOptions={secondaryOptions} selectedOption={selectedOption} setSelectedOption={setSelectedOption} selectedSecondaryOption={selectedSecondaryOption} setSelectedSecondaryOption={setSelectedSecondaryOption} />
 
                   <div className="relative max-w-[325px] sm:min-w-[325px] w-full">
                     {/* <!-- divider --> */}
                     <span className="absolute left-0 top-1/2 -translate-y-1/2 inline-block w-px h-5.5 bg-gray-4"></span>
                     <input
-                      onChange={(e) => setSearchQuery(e.target.value)}
+                      onChange={(e) => dispatch(setSearchQuery(e.target.value))}
                       value={searchQuery}
                       type="search"
                       name="search"
@@ -96,6 +114,7 @@ const Header = () => {
                     />
 
                     <button
+                      type="submit"
                       id="search-btn"
                       aria-label="Search"
                       className="flex items-center justify-center absolute right-3 top-1/2 -translate-y-1/2 ease-in duration-200 hover:text-red-dark"

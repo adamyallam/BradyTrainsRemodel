@@ -7,6 +7,7 @@ import ScaleDropdown from "./ScaleDropdown";
 import PriceDropdown from "./PriceDropdown";
 import shopData from "@/components/Shop/shopData";
 import SingleGridItem from "@/components/Shop/SingleGridItem";
+import { useSearchParams } from "next/navigation";
 
 const ShopAll = () => {
   const [productSidebar, setProductSidebar] = useState(false);
@@ -22,6 +23,11 @@ const ShopAll = () => {
   ];
 
   const [selectedOption, setSelectedOption] = useState(options[0]);
+
+  const searchParams = useSearchParams();
+  const query = searchParams.get("query")?.toLowerCase() || "";
+  const brand = searchParams.get("brand");
+  const scale = searchParams.get("scale");
 
   const handleStickyMenu = () => {
     if (window.scrollY >= 80) {
@@ -67,6 +73,24 @@ const ShopAll = () => {
 
   const filterProducts = (products) => {
     let filteredProducts = products;
+
+    if (query !== "") {
+      filteredProducts = filteredProducts.filter((product) =>
+        product.title.toLowerCase().includes(query)
+      );
+    }
+
+    if (scale) {
+      filteredProducts = filteredProducts.filter((product) =>
+        product.scale.toLowerCase() === scale.toLowerCase()
+      );
+    }
+
+    if (brand) {
+      filteredProducts = filteredProducts.filter((product) =>
+        product.manufacturer.toLowerCase() === brand.toLowerCase()
+      );
+    }
 
     if (selectedScales.length > 0) {
       filteredProducts = filteredProducts.filter((product) =>
@@ -121,20 +145,18 @@ const ShopAll = () => {
           <div className="flex gap-7.5">
             {/* <!-- Sidebar Start --> */}
             <div
-              className={`sidebar-content fixed xl:z-1 z-9999 left-0 top-0 xl:translate-x-0 xl:static max-w-[310px] xl:max-w-[270px] w-full ease-out duration-200 ${
-                productSidebar
-                  ? "translate-x-0 bg-white p-5 h-screen overflow-y-auto"
-                  : "-translate-x-full"
-              }`}
+              className={`sidebar-content fixed xl:z-1 z-9999 left-0 top-0 xl:translate-x-0 xl:static max-w-[310px] xl:max-w-[270px] w-full ease-out duration-200 ${productSidebar
+                ? "translate-x-0 bg-white p-5 h-screen overflow-y-auto"
+                : "-translate-x-full"
+                }`}
             >
               <button
                 onClick={() => setProductSidebar(!productSidebar)}
                 aria-label="button for product sidebar toggle"
-                className={`xl:hidden absolute -right-12.5 sm:-right-8 flex items-center justify-center w-8 h-8 rounded-md bg-white shadow-1 ${
-                  stickyMenu
-                    ? "lg:top-20 sm:top-34.5 top-35"
-                    : "lg:top-24 sm:top-39 top-37"
-                }`}
+                className={`xl:hidden absolute -right-12.5 sm:-right-8 flex items-center justify-center w-8 h-8 rounded-md bg-white shadow-1 ${stickyMenu
+                  ? "lg:top-20 sm:top-34.5 top-35"
+                  : "lg:top-24 sm:top-39 top-37"
+                  }`}
               >
                 <svg
                   className="fill-current"
