@@ -13,7 +13,15 @@ const NewItems = () => {
   const [stickyMenu, setStickyMenu] = useState(false);
   const [selectedScales, setSelectedScales] = useState([]);
   const [selectedManufacturers, setSelectedManufacturers] = useState([]);
-  const [priceRange, setPriceRange] = useState({from: 0, to: 400});
+  const [priceRange, setPriceRange] = useState({ from: 0, to: 400 });
+
+  const options = [
+    { label: "Latest Products", value: "0" },
+    { label: "Price: High to Low", value: "1" },
+    { label: "Price: Low to High", value: "2" },
+  ];
+
+  const [selectedOption, setSelectedOption] = useState(options[0]);
 
   const handleStickyMenu = () => {
     if (window.scrollY >= 80) {
@@ -26,14 +34,8 @@ const NewItems = () => {
   const clearAllFilters = () => {
     setSelectedScales([]);
     setSelectedManufacturers([]);
-    setPriceRange({from: 0, to: 400});
+    setPriceRange({ from: 0, to: 400 });
   };
-
-  const options = [
-    { label: "Latest Products", value: "0" },
-    { label: "Price: High to Low", value: "1" },
-    { label: "Price: Low to High", value: "2" },
-  ];
 
   const manufacturers = shopData.reduce((acc, product) => {
     const manufacturer = acc.find(m => m.name === product.manufacturer);
@@ -62,6 +64,15 @@ const NewItems = () => {
       scales.push({ name: scale, products: 0 });
     }
   });
+
+  const filterProducts = (products) => {
+    if (selectedOption.value === "1") {
+      return products.sort((a, b) => b.price - a.price);
+    } else if (selectedOption.value === "2") {
+      return products.sort((a, b) => a.price - b.price);
+    }
+    return products;
+  };
 
   useEffect(() => {
     window.addEventListener("scroll", handleStickyMenu);
@@ -140,13 +151,13 @@ const NewItems = () => {
                   </div>
 
                   {/* <!-- category box --> */}
-                  <ManufacturerDropdown manufacturers={manufacturers} selectedManufacturers={selectedManufacturers} setSelectedManufacturers={setSelectedManufacturers}/>
+                  <ManufacturerDropdown manufacturers={manufacturers} selectedManufacturers={selectedManufacturers} setSelectedManufacturers={setSelectedManufacturers} />
 
                   {/* <!-- Scale box --> */}
                   <ScaleDropdown scales={scales} selectedScales={selectedScales} setSelectedScales={setSelectedScales} />
 
                   {/* // <!-- price range box --> */}
-                  <PriceDropdown priceRange={priceRange} setPriceRange={setPriceRange}/>
+                  <PriceDropdown priceRange={priceRange} setPriceRange={setPriceRange} />
                 </div>
               </form>
             </div>
@@ -158,7 +169,7 @@ const NewItems = () => {
                 <div className="flex items-center justify-between">
                   {/* <!-- top bar left --> */}
                   <div className="flex flex-wrap items-center gap-4">
-                    <CustomSelect options={options} />
+                    <CustomSelect options={options} selectedOption={selectedOption} setSelectedOption={setSelectedOption} />
 
                     <p>
                       Showing All New Items
@@ -171,7 +182,7 @@ const NewItems = () => {
               {/* <!-- Products Grid Tab Content Start --> */}
               <div
                 className="grid grid-cols-2 lg:grid-cols-3 gap-x-7.5 gap-y-9">
-                {shopData.filter(item => item.collection === "New Arrivals").map((item, key) =>
+                {filterProducts(shopData.filter(item => item.collection === "New Arrivals")).map((item, key) =>
                   <SingleGridItem item={item} key={key} />
                 )}
               </div>
