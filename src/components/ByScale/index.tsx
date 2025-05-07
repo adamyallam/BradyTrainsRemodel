@@ -6,8 +6,6 @@ import ScaleDropdown from "./ScaleDropdown";
 import PriceDropdown from "./PriceDropdown";
 import shopData from "@/components/Shop/shopData";
 import SingleGridItem from "@/components/Shop/SingleGridItem";
-import SingleListItem from "@/components/Shop/SingleListItem";
-
 
 const ByScale = () => {
   const [productSidebar, setProductSidebar] = useState(false);
