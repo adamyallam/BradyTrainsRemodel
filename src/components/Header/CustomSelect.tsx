@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
 
-const CustomSelect = ({ options, secondaryOptions }) => {
+const CustomSelect = ({ options, secondaryOptions, selectedOption, setSelectedOption, selectedSecondaryOption, setSelectedSecondaryOption  }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isSecondaryOpen, setIsSecondaryOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState(options[0]);
-  const [selectedSecondaryOption, setSelectedSecondaryOption] = useState(secondaryOptions[0]);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
