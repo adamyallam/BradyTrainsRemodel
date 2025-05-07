@@ -52,6 +52,24 @@ const ByScale = () => {
     }
   });
 
+  const filterProducts = (products) => {
+    let filteredProducts = products;
+
+    if (selectedScales.length > 0) {
+      filteredProducts = filteredProducts.filter(product => selectedScales.includes(product.scale));
+    }
+
+    filteredProducts = filteredProducts.filter(product => product.price >= priceRange.from && product.price <= priceRange.to);
+
+    if (selectedOption.value === "1") {
+      return filteredProducts.sort((a, b) => b.price - a.price);
+    } else if (selectedOption.value === "2") {
+      return filteredProducts.sort((a, b) => a.price - b.price);
+    }
+
+    return filteredProducts;
+  };
+
   useEffect(() => {
     window.addEventListener("scroll", handleStickyMenu);
 
@@ -70,6 +88,8 @@ const ByScale = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   });
+
+  const filteredProducts = filterProducts(shopData);
 
   return (
     <>
@@ -157,7 +177,7 @@ const ByScale = () => {
               {/* <!-- Products Grid Tab Content Start --> */}
               <div
                 className="grid grid-cols-2 lg:grid-cols-3 gap-x-7.5 gap-y-9">
-                {shopData.map((item, key) =>
+                {filteredProducts.map((item, key) =>
                   <SingleGridItem item={item} key={key} />
                 )}
               </div>

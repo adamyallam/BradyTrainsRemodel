@@ -38,7 +38,7 @@ const ShopAll = () => {
   };
 
   const manufacturers = shopData.reduce((acc, product) => {
-    const manufacturer = acc.find(m => m.name === product.manufacturer);
+    const manufacturer = acc.find((m) => m.name === product.manufacturer);
     if (manufacturer) {
       manufacturer.products += 1;
     } else {
@@ -48,7 +48,7 @@ const ShopAll = () => {
   }, []);
 
   const scales = shopData.reduce((acc, product) => {
-    const scale = acc.find(s => s.name === product.scale);
+    const scale = acc.find((s) => s.name === product.scale);
     if (scale) {
       scale.products += 1;
     } else {
@@ -59,11 +59,40 @@ const ShopAll = () => {
 
   // Ensure all scales are represented, even if they have 0 products
   const allScales = ["N", "HO", "O", "G", "Z", "S"];
-  allScales.forEach(scale => {
-    if (!scales.find(s => s.name === scale)) {
+  allScales.forEach((scale) => {
+    if (!scales.find((s) => s.name === scale)) {
       scales.push({ name: scale, products: 0 });
     }
   });
+
+  const filterProducts = (products) => {
+    let filteredProducts = products;
+
+    if (selectedScales.length > 0) {
+      filteredProducts = filteredProducts.filter((product) =>
+        selectedScales.includes(product.scale)
+      );
+    }
+
+    if (selectedManufacturers.length > 0) {
+      filteredProducts = filteredProducts.filter((product) =>
+        selectedManufacturers.includes(product.manufacturer)
+      );
+    }
+
+    filteredProducts = filteredProducts.filter(
+      (product) =>
+        product.price >= priceRange.from && product.price <= priceRange.to
+    );
+
+    if (selectedOption.value === "1") {
+      return filteredProducts.sort((a, b) => b.price - a.price);
+    } else if (selectedOption.value === "2") {
+      return filteredProducts.sort((a, b) => a.price - b.price);
+    }
+
+    return filteredProducts;
+  };
 
   useEffect(() => {
     window.addEventListener("scroll", handleStickyMenu);
@@ -86,27 +115,26 @@ const ShopAll = () => {
 
   return (
     <>
-      <Breadcrumb
-        title={"Shop All Products"}
-        pages={["shop", "/", "Shop"]}
-      />
+      <Breadcrumb title={"Shop All Products"} pages={["shop", "/", "Shop"]} />
       <section className="overflow-hidden relative pb-20 pt-5 lg:pt-20 xl:pt-28 bg-[#f3f4f6]">
         <div className="max-w-[1170px] w-full mx-auto px-4 sm:px-8 xl:px-0">
           <div className="flex gap-7.5">
             {/* <!-- Sidebar Start --> */}
             <div
-              className={`sidebar-content fixed xl:z-1 z-9999 left-0 top-0 xl:translate-x-0 xl:static max-w-[310px] xl:max-w-[270px] w-full ease-out duration-200 ${productSidebar
-                ? "translate-x-0 bg-white p-5 h-screen overflow-y-auto"
-                : "-translate-x-full"
-                }`}
+              className={`sidebar-content fixed xl:z-1 z-9999 left-0 top-0 xl:translate-x-0 xl:static max-w-[310px] xl:max-w-[270px] w-full ease-out duration-200 ${
+                productSidebar
+                  ? "translate-x-0 bg-white p-5 h-screen overflow-y-auto"
+                  : "-translate-x-full"
+              }`}
             >
               <button
                 onClick={() => setProductSidebar(!productSidebar)}
                 aria-label="button for product sidebar toggle"
-                className={`xl:hidden absolute -right-12.5 sm:-right-8 flex items-center justify-center w-8 h-8 rounded-md bg-white shadow-1 ${stickyMenu
-                  ? "lg:top-20 sm:top-34.5 top-35"
-                  : "lg:top-24 sm:top-39 top-37"
-                  }`}
+                className={`xl:hidden absolute -right-12.5 sm:-right-8 flex items-center justify-center w-8 h-8 rounded-md bg-white shadow-1 ${
+                  stickyMenu
+                    ? "lg:top-20 sm:top-34.5 top-35"
+                    : "lg:top-24 sm:top-39 top-37"
+                }`}
               >
                 <svg
                   className="fill-current"
@@ -137,18 +165,34 @@ const ShopAll = () => {
                   <div className="bg-white shadow-1 rounded-lg py-4 px-5">
                     <div className="flex items-center justify-between">
                       <p>Filters:</p>
-                      <button onClick={clearAllFilters} className="text-red-dark">Clean All</button>
+                      <button
+                        onClick={clearAllFilters}
+                        className="text-red-dark"
+                      >
+                        Clean All
+                      </button>
                     </div>
                   </div>
 
                   {/* <!-- category box --> */}
-                  <ManufacturerDropdown manufacturers={manufacturers} selectedManufacturers={selectedManufacturers} setSelectedManufacturers={setSelectedManufacturers} />
+                  <ManufacturerDropdown
+                    manufacturers={manufacturers}
+                    selectedManufacturers={selectedManufacturers}
+                    setSelectedManufacturers={setSelectedManufacturers}
+                  />
 
                   {/* <!-- Scale box --> */}
-                  <ScaleDropdown scales={scales} selectedScales={selectedScales} setSelectedScales={setSelectedScales} />
+                  <ScaleDropdown
+                    scales={scales}
+                    selectedScales={selectedScales}
+                    setSelectedScales={setSelectedScales}
+                  />
 
                   {/* // <!-- price range box --> */}
-                  <PriceDropdown priceRange={priceRange} setPriceRange={setPriceRange} />
+                  <PriceDropdown
+                    priceRange={priceRange}
+                    setPriceRange={setPriceRange}
+                  />
                 </div>
               </form>
             </div>
@@ -160,26 +204,24 @@ const ShopAll = () => {
                 <div className="flex items-center justify-between">
                   {/* <!-- top bar left --> */}
                   <div className="flex flex-wrap items-center gap-4">
-                    <CustomSelect options={options} selectedOption={selectedOption} setSelectedOption={setSelectedOption}/>
+                    <CustomSelect
+                      options={options}
+                      selectedOption={selectedOption}
+                      setSelectedOption={setSelectedOption}
+                    />
 
-                    <p>
-                      Showing All Products
-                    </p>
+                    <p>Showing Filtered Products</p>
                   </div>
-
                 </div>
               </div>
 
               {/* <!-- Products Grid Tab Content Start --> */}
-              <div
-                className="grid grid-cols-2 lg:grid-cols-3 gap-x-7.5 gap-y-9">
-                {shopData.map((item, key) =>
+              <div className="grid grid-cols-2 lg:grid-cols-3 gap-x-7.5 gap-y-9">
+                {filterProducts(shopData).map((item, key) => (
                   <SingleGridItem item={item} key={key} />
-                )}
+                ))}
               </div>
               {/* <!-- Products Grid Tab Content End --> */}
-
-
             </div>
             {/* // <!-- Content End --> */}
           </div>

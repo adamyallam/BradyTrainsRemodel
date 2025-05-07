@@ -65,6 +65,28 @@ const ByTrainSets = () => {
     }
   });
 
+  const filterProducts = (products) => {
+    let filteredProducts = products;
+
+    if (selectedScales.length > 0) {
+      filteredProducts = filteredProducts.filter(product => selectedScales.includes(product.scale));
+    }
+
+    if (selectedManufacturers.length > 0) {
+      filteredProducts = filteredProducts.filter(product => selectedManufacturers.includes(product.manufacturer));
+    }
+
+    filteredProducts = filteredProducts.filter(product => product.price >= priceRange.from && product.price <= priceRange.to);
+
+    if (selectedOption.value === "1") {
+      return filteredProducts.sort((a, b) => b.price - a.price);
+    } else if (selectedOption.value === "2") {
+      return filteredProducts.sort((a, b) => a.price - b.price);
+    }
+
+    return filteredProducts;
+  };
+
   useEffect(() => {
     window.addEventListener("scroll", handleStickyMenu);
 
@@ -173,7 +195,7 @@ const ByTrainSets = () => {
               {/* <!-- Products Grid Tab Content Start --> */}
               <div
                 className="grid grid-cols-2 lg:grid-cols-3 gap-x-7.5 gap-y-9">
-                {shopData.filter(item => item.collection === "Train Sets").map((item, key) =>
+                {filterProducts(shopData.filter(item => item.collection === "Train Sets")).map((item, key) =>
                   <SingleGridItem item={item} key={key} />
                 )}
               </div>
