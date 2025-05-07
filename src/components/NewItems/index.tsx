@@ -37,41 +37,42 @@ const NewItems = () => {
     setPriceRange({ from: 0, to: 400 });
   };
 
-  const manufacturers = shopData.reduce((acc, product) => {
-    const manufacturer = acc.find(m => m.name === product.manufacturer);
-    if (manufacturer) {
-      manufacturer.products += 1;
-    } else {
-      acc.push({ name: product.manufacturer, products: 1, isRefined: false });
-    }
-    return acc;
-  }, []);
+  const manufacturers = [
+    { name: "Atlas", products: 0, isRefined: false },
+    { name: "Bachmann", products: 0, isRefined: false },
+    { name: "Lionel", products: 0, isRefined: false },
+    { name: "MTH", products: 0, isRefined: false },
+  ];
 
-  const scales = shopData.reduce((acc, product) => {
-    const scale = acc.find(s => s.name === product.scale);
-    if (scale) {
-      scale.products += 1;
-    } else {
-      acc.push({ name: product.scale, products: 1 });
-    }
-    return acc;
-  }, []);
-
-  // Ensure all scales are represented, even if they have 0 products
-  const allScales = ["N", "HO", "O", "G", "Z", "S"];
-  allScales.forEach(scale => {
-    if (!scales.find(s => s.name === scale)) {
-      scales.push({ name: scale, products: 0 });
-    }
-  });
+  const scales = [
+    { name: "N", products: 0 },
+    { name: "HO", products: 0 },
+    { name: "O", products: 0 },
+    { name: "G", products: 0 },
+    { name: "Z", products: 0 },
+    { name: "S", products: 0 },
+  ];
 
   const filterProducts = (products) => {
-    if (selectedOption.value === "1") {
-      return products.sort((a, b) => b.price - a.price);
-    } else if (selectedOption.value === "2") {
-      return products.sort((a, b) => a.price - b.price);
+    let filteredProducts = products;
+
+    if (selectedScales.length > 0) {
+      filteredProducts = filteredProducts.filter(product => selectedScales.includes(product.scale));
     }
-    return products;
+
+    if (selectedManufacturers.length > 0) {
+      filteredProducts = filteredProducts.filter(product => selectedManufacturers.includes(product.manufacturer));
+    }
+
+    filteredProducts = filteredProducts.filter(product => product.price >= priceRange.from && product.price <= priceRange.to);
+
+    if (selectedOption.value === "1") {
+      return filteredProducts.sort((a, b) => b.price - a.price);
+    } else if (selectedOption.value === "2") {
+      return filteredProducts.sort((a, b) => a.price - b.price);
+    }
+
+    return filteredProducts;
   };
 
   useEffect(() => {
