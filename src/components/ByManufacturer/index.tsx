@@ -11,7 +11,15 @@ const ByManufacturer = () => {
   const [productSidebar, setProductSidebar] = useState(false);
   const [stickyMenu, setStickyMenu] = useState(false);
   const [selectedManufacturers, setSelectedManufacturers] = useState([]);
-  const [priceRange, setPriceRange] = useState({from: 0, to: 400});
+  const [priceRange, setPriceRange] = useState({ from: 0, to: 400 });
+
+  const options = [
+    { label: "Latest Products", value: "0" },
+    { label: "Price: High to Low", value: "1" },
+    { label: "Price: Low to High", value: "2" },
+  ];
+
+  const [selectedOption, setSelectedOption] = useState(options[0]);
 
   const handleStickyMenu = () => {
     if (window.scrollY >= 80) {
@@ -23,14 +31,8 @@ const ByManufacturer = () => {
 
   const clearAllFilters = () => {
     setSelectedManufacturers([]);
-    setPriceRange({from: 0, to: 400});
+    setPriceRange({ from: 0, to: 400 });
   };
-
-  const options = [
-    { label: "Latest Products", value: "0" },
-    { label: "Price: High to Low", value: "1" },
-    { label: "Price: Low to High", value: "2" },
-  ];
 
   const manufacturers = shopData.reduce((acc, product) => {
     const manufacturer = acc.find(m => m.name === product.manufacturer);
@@ -119,10 +121,10 @@ const ByManufacturer = () => {
                   </div>
 
                   {/* <!-- category box --> */}
-                  <ManufacturerDropdown manufacturers={manufacturers} selectedManufacturers={selectedManufacturers} setSelectedManufacturers={setSelectedManufacturers}/>
+                  <ManufacturerDropdown manufacturers={manufacturers} selectedManufacturers={selectedManufacturers} setSelectedManufacturers={setSelectedManufacturers} />
 
                   {/* // <!-- price range box --> */}
-                  <PriceDropdown priceRange={priceRange} setPriceRange={setPriceRange}/>
+                  <PriceDropdown priceRange={priceRange} setPriceRange={setPriceRange} />
                 </div>
               </form>
             </div>
@@ -134,7 +136,7 @@ const ByManufacturer = () => {
                 <div className="flex items-center justify-between">
                   {/* <!-- top bar left --> */}
                   <div className="flex flex-wrap items-center gap-4">
-                    <CustomSelect options={options} />
+                    <CustomSelect options={options} selectedOption={selectedOption} setSelectedOption={setSelectedOption}/>
 
                     <p>
                       Showing All Products By Manufacturer

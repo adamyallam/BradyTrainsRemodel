@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 
-const CustomSelect = ({ options }) => {
+const CustomSelect = ({ options, selectedOption, setSelectedOption }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState(options[0]);
   const selectRef = useRef(null);
 
   // Function to close the dropdown when a click occurs outside the component
