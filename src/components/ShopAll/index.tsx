@@ -254,7 +254,15 @@ const ShopAll = () => {
                     Try adjusting your filters or search term.
                   </p>
                   <Link onClick={clearAllFilters} href="/shop" className="bg-red-dark text-white py-2 px-4 rounded hover:bg-red-light">
-                      Back to Shop
+                      Clear Search
+                  </Link>
+                </div>
+              )}
+              {/* Clear Search Button Below Products */}
+              {filtered.length > 0 && (
+                <div className="text-center mt-8">
+                  <Link onClick={clearAllFilters} href="/shop" className="bg-red-dark text-white py-2 px-4 rounded hover:bg-red-light">
+                    Clear Search
                   </Link>
                 </div>
               )}
