@@ -23,6 +23,7 @@ const QuickViewModal = () => {
   const [activePreview, setActivePreview] = useState(0);
 
   const imageSrc = product?.imgs?.previews?.[activePreview];
+  const discount = Number((product?.price - product?.discountedPrice).toFixed(2));
 
   // preview modal
   const handlePreviewSlider = () => {
@@ -154,7 +155,7 @@ const QuickViewModal = () => {
 
             <div className="max-w-[445px] w-full">
               <span className="inline-block text-custom-xs font-medium text-white py-1 px-3 bg-green mb-6.5">
-                SALE 20% OFF
+                SAVE ${discount} NOW
               </span>
 
               <h3 className="font-semibold text-xl xl:text-heading-5 text-dark mb-4">
@@ -307,8 +308,7 @@ const QuickViewModal = () => {
               </div>
 
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has.
+                {product.description}
               </p>
 
               <div className="flex flex-wrap justify-between gap-5 mt-6 mb-7.5">
