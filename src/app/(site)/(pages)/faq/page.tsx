@@ -2,8 +2,8 @@ import FAQ from "@/components/faq";
 
 import { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "FAQ Page | NextCommerce Nextjs E-commerce template",
-  description: "This is FAQ Page for NextCommerce Template",
+  title: "FAQ",
+  description: "FAQ page for Brady's Train Outlet",
 };
 
 const FAQPage = () => {

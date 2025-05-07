@@ -3,8 +3,8 @@ import ByScale from "@/components/ByScale";
 
 import { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Shop Page | NextCommerce Nextjs E-commerce template",
-  description: "This is Shop Page for NextCommerce Template",
+  title: "Shop By Scale",
+  description: "Shop By Scale page for Brady's Train Outlet",
   // other metadata
 };
 

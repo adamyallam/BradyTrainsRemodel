@@ -3,8 +3,8 @@ import SellYourTrains from "@/components/SellYourTrains";
 
 import { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Shop Page | NextCommerce Nextjs E-commerce template",
-  description: "This is Shop Page for NextCommerce Template",
+  title: "Sell Your Trains",
+  description: "Sell Your Trains page for Brady's Train Outlet",
   // other metadata
 };
 

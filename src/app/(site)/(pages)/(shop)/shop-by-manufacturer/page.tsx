@@ -4,7 +4,7 @@ import ByManufacturer from "@/components/ByManufacturer";
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Shop By Manufacturer",
-  description: "This is Shop Page for NextCommerce Template",
+  description: "Shop By Manufacturer page for Brady's Train Outlet",
   // other metadata
 };
 
