@@ -39,8 +39,8 @@ const TentSales = () => {
 
             <p className="mb-6">
               Join us for the biggest train tent sale of the year! Discover amazing
-              deals on model trains, accessories, and collectibles. Whether you're a
-              seasoned collector or just starting out, there's something for everyone.
+              deals on model trains, accessories, and collectibles. Whether you&apos;re a
+              seasoned collector or just starting out, there&apos;s something for everyone.
             </p>
 
             <p className="mb-6">
