@@ -47,8 +47,8 @@ const TrainShows = () => {
             <p className="mb-6">
               Train shows are the perfect opportunity to connect with fellow hobbyists,
               learn from experts, and discover the latest trends in the model train
-              community. Whether you're a seasoned collector or a curious newcomer,
-              there's something for everyone.
+              community. Whether you&apos;re a seasoned collector or a curious newcomer,
+              there&apos;s something for everyone.
             </p>
 
             <p>
